@@ -60,3 +60,16 @@ const a = Math.PI
 a.toFixed(5)
 a.toFixed(3)
 a.toFixed(2)
+
+// Not a Number
+const notANumber = NaN
+// this value is of the Number type, but does not represent an actual number
+
+// Weird floats
+// because of floating points in binary numbers,
+// numbers less than one are not exact
+console.log(0.2 + 0.1)
+console.log(0.3)
+
+// checking for float equality should mean comparing difference to EPSILON
+console.log(0.1 + 0.2 - 0.3 < Number.EPSILON)
