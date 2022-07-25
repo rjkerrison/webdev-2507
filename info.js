@@ -1,6 +1,7 @@
 const runner = require('child_process')
 const fs = require('fs')
-const info = require('./info.json')
+const path = require('path')
+const info = require('./students.json')
 
 const enhanceStudent = (student) => {
   if (student.github && typeof student.github === 'string') {
@@ -9,12 +10,20 @@ const enhanceStudent = (student) => {
       link: `https://github.com/${student.github}/`,
     }
   }
+  if (
+    student.morningSunshine?.date &&
+    typeof student.morningSunshine?.date === 'string'
+  ) {
+    const date = new Date(student.morningSunshine.date)
+    student.morningSunshine = { date }
+  }
 }
 info.forEach(enhanceStudent)
 
 const saveFile = () => {
+  const exportFilepath = path.join(__dirname, 'students.json')
   const dump = JSON.stringify(info, null, 2)
-  fs.writeFile('./info.json', dump, function (err) {
+  fs.writeFile(exportFilepath, dump, function (err) {
     if (err) {
       return console.log(err)
     }
@@ -28,6 +37,12 @@ const chooseRandomStudent = (filter) => {
   }
   const index = Math.floor(Math.random() * choices.length)
   return choices[index]
+}
+
+const getNextMorningSunshine = () => {
+  const sortedStudents = info.filter((x) => x.morningSunshine.date > new Date())
+  sortedStudents.sort((a, b) => a.morningSunshine.date - b.morningSunshine.date)
+  return sortedStudents[0]
 }
 
 const searchStudents = (searchTerm) => {
@@ -234,6 +249,19 @@ const execute = async () => {
     case 'view':
       student = chooseRandomStudent()
       viewStudentProject(student)
+      break
+    case 'sunshine':
+      student = getNextMorningSunshine()
+      const formatter = Intl.DateTimeFormat('fr-FR', {
+        month: 'long',
+        day: 'numeric',
+        weekday: 'long',
+      })
+      console.log(
+        `Next morning sunshine, on ${formatter.format(
+          student.morningSunshine.date
+        )}: ${student.fullname}!`
+      )
       break
     default:
       help(mode)
