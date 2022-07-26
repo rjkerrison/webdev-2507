@@ -1,13 +1,13 @@
 // List out 5 of your classmates in an array declaration.
-const names = ['Begonia', 'Caetano', 'Sebastian', 'Pierre', 'Hugo']
+const names = ['Aymeric', 'Hamza', 'Charlotte', 'Benjamin', 'Sébastien']
 
 // Add a name to the end
-names.push('Benedicte')
+names.push('Arcadio')
 
 // Add a name to the start
-names.unshift('Stephane')
+names.unshift('Igor')
 
-// Remove three from the middle
+// Remove three names from the middle
 names.splice(2, 3)
 
 // Loop over the remaining names, greeting them with a hello (in any language)
