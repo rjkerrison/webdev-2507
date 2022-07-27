@@ -14,6 +14,11 @@ names.splice(2, 3)
 names.forEach((name) => {
   console.log(`Ola, ${name}!`)
 })
+const greeting = (name) => {
+  console.log(`Hallo, ${name}!`)
+}
+// the return value from calling .forEach is always undefined
+console.log(names.forEach(greeting))
 
 // Advanced
 // List out in an array all of the coins in a currency (usually starts 1, 2, 5)
@@ -26,8 +31,23 @@ for (let i = 0; i < coins.length; i++) {
   // add the coin value onto sum
   sum += coins[i]
 }
+// for (const coin of coins) {
+//   sum += coin
+// }
 console.log('sum', sum)
+
+let forEachSum = 0
+coins.forEach((coin) => {
+  forEachSum += coin
+})
+console.log('forEachSum', forEachSum)
 
 // Use a map to create a new array where every coin value is 100 times larger
 const newCoins = coins.map((coin) => coin * 100)
 console.log('newCoins', newCoins)
+
+const newCoins2 = coins.map(function (coin) {
+  return coin * 100
+})
+console.log(newCoins2)
+console.log(coins)
