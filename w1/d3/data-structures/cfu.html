@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checks for Understanding</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../shared/cfu.css" />
+    <style>
+      body {
+        font-family: 'Varela Round';
+      }
+      .paddington {
+        font-family: 'Paddington';
+      }
+
+      section:nth-of-type(7n) {
+        background-color: hsl(280, 49%, 42%);
+      }
+      section:nth-of-type(7n + 1) {
+        background-color: hsl(230, 49%, 42%);
+      }
+      section:nth-of-type(7n + 2) {
+        background-color: hsl(130, 49%, 42%);
+      }
+      section:nth-of-type(7n + 6) {
+        background-color: hsl(330, 49%, 42%);
+      }
+      section:nth-of-type(7n + 4) {
+        background-color: hsl(0, 49%, 42%);
+      }
+      section:nth-of-type(7n + 5) {
+        background-color: hsl(50, 69%, 62%);
+        color: black;
+      }
+      section:nth-of-type(7n + 3) {
+        background-color: hsl(30, 49%, 42%);
+      }
+
+      ol li {
+        display: list-item;
+        font-size: 4rem;
+      }
+      p > code {
+        color: inherit;
+      }
+    </style>
+    <!-- Load Babel - used to parse JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- React's core library-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- ReactDOM library renders the content created with React to the DOM. -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"
+      integrity="sha512-BNc7saQYlxCL10lykUYhFBcnzdKMnjx5fp5s5wPucDyZ7rKNwCoqJh1GwEAIhuePEK4WM9askJBRsu7ma0Rzvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../../shared/cfu.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        console.log('Loaded', hljs)
+        hljs.highlightAll()
+      })
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const questions = [
+        <h2 className='paddington'>JavaScript Basics</h2>,
+        <h2>What are the JavaScript data types?</h2>,
+        <ol>
+          {[
+            'Number',
+            'String',
+            'Boolean',
+            'Null',
+            'Undefined',
+            'BigInt (for big integers)',
+            'Symbol (a unique key, not often used)',
+            'Function',
+            'Object',
+          ].map((a) => (
+            <li key={a}>{a}</li>
+          ))}
+        </ol>,
+        <h2>
+          How can we display a number like <code>0.300000000004</code> to two
+          decimal places?
+        </h2>,
+        <>
+          <p>
+            With <code>.toFixed(2)</code> like this:
+          </p>
+          <pre>
+            <code>{`const pointThree = 0.2 + 0.1
+pointThree.toFixed(2) // '0.30'`}</code>
+          </pre>
+        </>,
+        <h2>How do we access an array item?</h2>,
+        <>
+          <p>With square brackets, like this:</p>
+          <pre>
+            <code>{`const animals = ['Dog', 'Cat', 'Giraffe']
+animals[2] // 'Giraffe'`}</code>
+          </pre>
+        </>,
+        <h2>How should we name our functions?</h2>,
+        <>
+          <p>
+            As verbs, and in <code>camelCase</code>.
+          </p>
+          <pre>
+            <code>{`function createSomethingCool() {
+  // create something cool in here
+}
+function badName() {
+  // this is named with a noun!
+  // I don't know what it will do when I call it
+}
+`}</code>
+          </pre>
+        </>,
+        <h2>What are the two ways we can add a single element in an array?</h2>,
+        <>
+          <p>
+            Normal way: <code>.push()</code>.
+          </p>
+          <p>
+            Weird way: <code>.unshift()</code>.
+          </p>
+        </>,
+        <h2>
+          What does it mean for arrays and strings to be <i>zero-based</i> in
+          JavaScript
+        </h2>,
+        <>
+          <p>
+            It means that the first element is accessed at index 0, the second
+            at 1, etc.
+          </p>
+          <pre>
+            <code>{`const fruits = ['Apple', 'Banana', 'Cherry']
+const apple = fruits[0] // 'Apple', because 0 is the first element in the array!
+const a = apple[0] // 'A', because 0 is the first character in the string!`}</code>
+          </pre>
+        </>,
+        <h2>What does it mean for a value to be "falsey"?</h2>,
+        <p>
+          It means it is evaluated in boolean expressions like{' '}
+          <code>false</code> would be. This means it is returned when it is the
+          left-hand side of an <code>&&</code> expression. It also means that it
+          will not result in the code inside an <code>if</code> block being run
+          when used as the condition.
+        </p>,
+        <h2>What are the "falsey" values?</h2>,
+        <>
+          <p>These values are falsey:</p>
+          <pre>
+            <code>{`false
+0
+-0
+NaN
+''
+null
+undefined`}</code>
+          </pre>
+          <p>Everything else is truthy.</p>
+        </>,
+        <h2>How can we declare a string?</h2>,
+        <>
+          <p>
+            In double quotes <code>""</code>, single quotes <code>''</code>, or
+            backticks <code>``</code>.
+          </p>
+          <p>
+            Backticks allow for multi-line strings and for template strings.
+          </p>
+        </>,
+        <h2>
+          What do we use to check the value of a variable when we're coding?
+        </h2>,
+        <pre>
+          <code>{`const checkCode = 'with console.log!'
+console.log(checkCode)`}</code>
+        </pre>,
+        <h2>What are the different ways of looping over an array?</h2>,
+        <p>
+          A <code>for</code> loop, a <code>for-of</code> loop, and the{' '}
+          <code>.forEach</code> method!
+        </p>,
+        <h2>What other way can we loop?</h2>,
+        <p>
+          A <code>while</code> loop
+        </p>,
+        <h2>
+          How can we create an array from a string, and a string from an array?
+        </h2>,
+        <p>
+          With <code>.split()</code> and <code>.join()</code>.
+        </p>,
+        <>
+          <h2>What does this thing mean?</h2>
+          <pre>
+            <code>{`let element = 'Hello world!'
+^^^`}</code>
+          </pre>
+        </>,
+        <p>We are declaring a variable whose value can change.</p>,
+        <h2>Which three ways can we define a function?</h2>,
+        <div className='flex-row'>
+          <div>
+            <p>declaration</p>
+            <pre>
+              <code>{`function operate() {
+  pickupTweezers()
+  moveHandSteadily()
+}`}</code>
+            </pre>
+          </div>
+          <div>
+            <div>
+              <p>expression</p>
+              <pre>
+                <code>{`const expressYourself = function () {
+  const allYouGotToDoNow =
+    'express yourself'
+  return allYouGotToDoNow
+}`}</code>
+              </pre>
+            </div>
+            <div>
+              <p>arrow expression</p>
+              <pre>
+                <code>{`const getMessage = () => 'failed this city'`}</code>
+              </pre>
+            </div>
+          </div>
+        </div>,
+        <h2 className='paddington'>The End</h2>,
+      ]
+
+      const QuestionSection = ({ element }) => <section>{element}</section>
+
+      ReactDOM.render(
+        <>
+          <header>
+            <h1>JavaScript Basics Recap</h1>
+          </header>
+          <main>
+            {questions.map((q, i) => (
+              <QuestionSection element={q} key={i} />
+            ))}
+          </main>
+        </>,
+        document.getElementById('root'),
+        () => hljs.highlightAll()
+      )
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  color: rgb(191, 221, 247);
+  background-color: hsl(168, 67%, 30%);
+  margin: 5rem;
+  font-size: 1.5rem;
+}
+
+p {
+  font-weight: 100;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: hsl(168, 91%, 71%);
+}
+
+#section-one {
+  border-color: hsl(168, 91%, 71%);
+}
+
+.special {
+  padding: 1rem;
+  border: 0.5rem solid rgb(233, 201, 201);
+}
+
+.super {
+  border: 1rem solid rgb(238, 225, 154);
+  font-weight: 600;
+}
+
+section {
+  padding: 1rem;
+  border: 3px solid white;
+  width: 420px;
+  height: 650px;
+}
+
+section p {
+  font-style: italic;
+}
+
+section .special {
+  margin: 0;
+}
+
+/* 
+span {
+  display: block;
+}
+
+div {
+    display: inline;
+} */
