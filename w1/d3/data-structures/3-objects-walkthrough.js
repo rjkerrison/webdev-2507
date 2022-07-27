@@ -21,12 +21,12 @@ const bicycle = {
 }
 
 const student = {
-  name: 'Gaurav',
+  name: 'Charlotte',
   // values can be arrays
   pets: [
     // arrays can contain objects
-    { species: 'cat', name: 'Minou' },
-    { species: 'cat', name: 'Gypsy' },
+    { species: 'dog', name: 'Dog1' },
+    { species: 'dog', name: 'Dog2' },
   ],
 }
 
@@ -48,21 +48,20 @@ console.log(
 // Adding a property
 console.log('student is', student)
 student.vehicle = bicycle
-student['classes'] = ['Webdev 905']
+student['classes'] = ['WebDev 2507']
 student['longer property name with spaces'] = true
 console.log('student is', student)
 
 // This doesn't work:
 // student.longer property name with spaces
-// We can only use dot notation when the key is a valid identifier
-// (i.e. can we use it for a variable name?)
+// We can only use dot notation when the key is a valid identifier (name matches the naming rules for a variable)
 
 // const vs let
 let hello = { name: 'hi' }
 // we cannot reassign a const, but we can reassign a let
 hello = { name: 'bye' }
 
-student.classes.push('UXUI 905')
+student.classes.push('UXUI 2507')
 console.log('student is', student)
 
 // removing a property

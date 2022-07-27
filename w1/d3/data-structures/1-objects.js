@@ -1,23 +1,35 @@
 // JavaScript objects
+const bottleColour = 'white'
+const bottleContents = 'nothing'
 
+// object literal syntax
 const bottle = {
-  color: 'white',
-  contents: 'water',
-  topColor: 'silver',
-  thing: 'uh oh',
+  colour: 'white',
+  contents: ['air', 'tiny bit of water'],
+  lidColour: 'silver',
+  isEmpty: true,
+  someFunction: function () {},
+  'a key with a space in its name': true,
 }
 
-console.log(bottle.color) // dot notation
-console.log(bottle['contents']) // brackets notation
+console.log(bottle) // we can usually log the whole objects
+console.log(bottle.colour) // dot notation
+console.log(bottle['colour']) // brackets notation
+console.log(bottle.lidColour) // dot notation
+console.log(bottle['lidColour']) // brackets notation
+console.log(bottle.contents) // brackets notation
 
 // Add, remove and modify keys
 bottle.owner = 'Robin'
+console.log(bottle.owner)
 
 // we can have non-valid identifiers as property keys
 // but we will not be able to use dot notation to access them
 // (this isn't a big problem — we can use brackets)
 const myProperty = 'hello I am a key'
 bottle[myProperty] = 'hi i am a value'
+// setting a new key-value pair in the bottle
+bottle['a valid key'] = true
 
 console.log(bottle)
 console.log(bottle.owner, bottle.hello, bottle['hello I am a key'])
@@ -27,23 +39,13 @@ const dictionary = {
   // It's okay to use keys that are human-readable if the purpose
   // of your object keys is to show them to a user
   'dot notation':
-    'the use of a dot to access properties in a javaScript object',
+    'the use of a dot to access properties in a JavaScript object',
 }
 
 // Modify a property
 console.log(bottle)
-bottle.contents = 'empty'
+bottle.contents = []
 console.log(bottle)
-
-// Accessing all properties
-for (const thing in bottle) {
-  // use brackets notation to access with variable keys
-  console.log(thing, bottle[thing], bottle.thing)
-}
-
-console.log('Object.keys:', Object.keys(bottle))
-console.log('Object.values:', Object.values(bottle))
-console.log('Object.entries:', Object.entries(bottle))
 
 // Other ways to declare an object
 let someObject = new Object()
