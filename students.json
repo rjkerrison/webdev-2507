@@ -25,6 +25,10 @@
     "fullname": "Charlotte Alleaume",
     "morningSunshine": {
       "date": "2022-08-16T00:00:00.000Z"
+    },
+    "github": {
+      "username": "challeau",
+      "link": "https://github.com/challeau/"
     }
   },
   {
@@ -74,6 +78,10 @@
     "fullname": "Marko Ivezic",
     "morningSunshine": {
       "date": "2022-09-05T00:00:00.000Z"
+    },
+    "github": {
+      "username": "MarkoI89",
+      "link": "https://github.com/MarkoI89/"
     }
   },
   {
@@ -88,6 +96,10 @@
     "fullname": "Meryem Ben Jouda",
     "morningSunshine": {
       "date": "2022-08-01T00:00:00.000Z"
+    },
+    "github": {
+      "username": "Meryembj",
+      "link": "https://github.com/Meryembj/"
     }
   },
   {
@@ -116,6 +128,10 @@
     "fullname": "Walid Jamili",
     "morningSunshine": {
       "date": "2022-08-17T00:00:00.000Z"
+    },
+    "github": {
+      "username": "walid21",
+      "link": "https://github.com/walid21/"
     }
   },
   {
@@ -123,6 +139,10 @@
     "fullname": "Yuan Liu",
     "morningSunshine": {
       "date": "2022-08-18T00:00:00.000Z"
+    },
+    "github": {
+      "username": "yuanliuddd",
+      "link": "https://github.com/yuanliuddd/"
     }
   }
 ]
