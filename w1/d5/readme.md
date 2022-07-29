@@ -7,7 +7,8 @@ and how to add special effects like transitions and animations.
 
 1. [flexbox](./1-flexbox)
 2. [responsive](./2-responsive)
-3. [transitions and animations](./3-animations)
+3. [position](./3-position)
+4. [transitions and animations](./4-animations)
 
 ## Lab: Instagram Clone
 
