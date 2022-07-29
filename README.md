@@ -7,6 +7,8 @@ Kicking off on 25th July 2022, we'll have 9 weeks to become full-stack web devel
 - [Welcome to WebDev 2507 Paris](#welcome-to-webdev-2507-paris)
   - [Who's the team?](#whos-the-team)
   - [Using this repository](#using-this-repository)
+    - [Notes](#notes)
+    - [Staying up-to-date](#staying-up-to-date)
     - [In case of issues pulling latest changes](#in-case-of-issues-pulling-latest-changes)
   - [Script helpers](#script-helpers)
     - [Generating groups](#generating-groups)
@@ -21,6 +23,24 @@ Your instructional team includes:
 - Haroun Boudour
 
 ## Using this repository
+
+This repo will be updated at least daily. We'll have the latest examples from class, as well as a description of the day's main topics, and links to useful resources.
+
+### Notes
+
+We break the notes down by week.
+
+- [Week 1: Fundamentals](./w1)
+- [Week 2: Building Applications](./w2)
+- Week 3: Project 1: Building a Game
+- Week 4: Serving Data
+- Week 5: Advanced Backend
+- Week 6: Project 2: Building a REST API
+- Week 7: React Basics
+- Week 8: Integrating
+- Week 9: Project 3: Full-Stack Application
+
+### Staying up-to-date
 
 You can get the latest changes of this repository by running
 
