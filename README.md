@@ -39,3 +39,15 @@ git stash
 git pull
 git stash pop
 ```
+
+## Script helpers
+
+This repo comes with a script helper: `students.sh`. Run it and see.
+
+### Generating groups
+
+Run `./students.sh groups 3` to generate groups of three.
+
+### Checking morning sunshines
+
+Run `./students.sh sunshine` to find out who is doing morning sunshine next!
