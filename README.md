@@ -4,6 +4,14 @@ Hello WebDev Paris 2507!
 
 Kicking off on 25th July 2022, we'll have 9 weeks to become full-stack web developers.
 
+- [Welcome to WebDev 2507 Paris](#welcome-to-webdev-2507-paris)
+  - [Who's the team?](#whos-the-team)
+  - [Using this repository](#using-this-repository)
+    - [In case of issues pulling latest changes](#in-case-of-issues-pulling-latest-changes)
+  - [Script helpers](#script-helpers)
+    - [Generating groups](#generating-groups)
+    - [Checking morning sunshines](#checking-morning-sunshines)
+
 ## Who's the team?
 
 Your instructional team includes:
