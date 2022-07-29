@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.box-container {
+  border: 0.5rem solid black;
+  width: 516px;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.box {
+  display: inline-block;
+  border: 0.25rem dashed yellow;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+}
+
+.box:nth-of-type(2n + 1) {
+  background-color: red;
+}
+
+.box:nth-of-type(2n) {
+  background-color: blue;
+}
