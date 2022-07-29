@@ -7,7 +7,11 @@ CSS Transitions and Animations break down into a few ideas:
 - transitions
 - animations
 
-## resources
+Transitions can apply when we hover over an element, or (by using JS which we'll see [next week](../../../w2/d1/)) when an element's class changes.
+
+**Animations** apply all the time. If we have a spinner, it's an animation. If we have a slide-in, a fade, like in a presentation, that's a **transition**.
+
+## Resources
 
 - [animations reference](https://codepen.io/rjkerrison/pen/VwjRyJY)
 - animations practice
