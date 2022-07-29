@@ -1,0 +1,58 @@
+h1 {
+  /* specify on main CSS block
+    the transition properties
+    
+    because we want to have a symmetrical transition */
+  transition-property: font-size;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 2s;
+  transition: font-size 1s ease-in-out 2s;
+}
+
+h1:hover {
+  /* end state, after transition */
+  font-size: 8rem;
+  color: red;
+  transform: translateX(10px);
+}
+
+img {
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  /* animation-iteration-count: infinite;
+  animation-direction: alternate; */
+  animation: spin 5s linear infinite;
+}
+
+/* Uncomment this rule-set if you want to lose your mind */
+/* * {
+  animation: spin 2s linear infinite;
+} */
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* keyframes is how we define what an animation-name does */
+@keyframes crazy {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  25% {
+    transform: rotate(135deg) scale(2);
+    opacity: 0.25;
+  }
+  75% {
+    transform: rotate(-360deg) scale(-1);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="./flexbox.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Flexbox cheatsheet</h1>
+      <p>Flexbox allows us to create flexible layouts.</p>
+    </header>
+    <main>
+      <section>
+        <h2>flex column spacing</h2>
+        <p>main axis: vertical, because flex-direction is column</p>
+        <p>justify-content: space-between; means we create vertical space</p>
+        <div class="flex column spacing">
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+        </div>
+      </section>
+      <section>
+        <h2>flex row spacing</h2>
+        <p>main axis: horizontal, because flex-direction is row</p>
+        <p>justify-content: space-between; means we create horizontal space</p>
+        <div class="flex row spacing">
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+        </div>
+      </section>
+      <section>
+        <h2>flex column center</h2>
+        <p>main axis: vertical</p>
+        <p>justify-content: center; means we center items vertically</p>
+        <div class="flex column center">
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+        </div>
+      </section>
+      <section>
+        <h2>flex row center</h2>
+        <p>main axis: horizontal</p>
+        <p>justify-content: center; means we center items horizontally</p>
+        <div class="flex row center">
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+        </div>
+      </section>
+      <section>
+        <h2>flex column align-center</h2>
+        <div class="flex column align-center">
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+        </div>
+      </section>
+      <section>
+        <h2>flex row align-center</h2>
+        <div class="flex row align-center">
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+        </div>
+      </section>
+      <section>
+        <h2>flex column center align-center</h2>
+        <div class="flex column center align-center">
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+        </div>
+      </section>
+      <section>
+        <h2>flex row center align-center</h2>
+        <div class="flex row center align-center">
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+        </div>
+      </section>
+      <section class="full">
+        <h2>flex row center align-center</h2>
+        <div class="flex row center align-center">
+          <div class="item grow">flex GROW item</div>
+          <div class="item double-grow">flex DOUBLE-GROW item</div>
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+        </div>
+      </section>
+      <section class="full">
+        <h2>flex row center align-center</h2>
+        <div class="flex row center align-center">
+          <div class="item no-shrink">flex NO-SHRINK item</div>
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+          <div class="item">flex item</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

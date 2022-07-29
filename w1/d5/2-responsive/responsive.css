@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+}
+
+h1 {
+  font-size: calc(2rem + 2vw);
+  padding: 2rem;
+}
+
+.container p {
+  font-size: 2rem;
+}
+
+.large-only {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .container p {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  .container {
+    flex-direction: row;
+    background-image: url(https://pataruco.s3.amazonaws.com/ga/example/batman-237.png);
+  }
+}
+
+@media (min-width: 800px) {
+  .container p {
+    font-size: 4rem;
+  }
+  .large-only {
+    display: block;
+  }
+}

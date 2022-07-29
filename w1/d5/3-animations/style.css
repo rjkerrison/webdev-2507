@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Varela+Round&display=swap');
+
+h1 {
+  font-size: 6rem;
+  font-family: 'Gideon Roman', cursive;
+}
+h2 {
+  font-size: 4rem;
+}
+body {
+  font-family: 'Varela Round', sans-serif;
+  padding: 2rem;
+}
+
+p {
+  font-size: 3rem;
+}
+
+picture {
+  display: block;
+  /* Centre images inside picture */
+  text-align: center;
+}
+
+picture img {
+  /* Let it be as wide as possible */
+  max-width: 100%;
+  /* Let it grow relative to its width */
+  height: auto;
+}
+
+li {
+  font-size: 3rem;
+}
+
+/* Inline #1 | http://127.0.0.1:5502/w1/d5/selectors.html */
+
+ol li {
+  color: purple;
+  text-decoration: underline;
+}
+
+ul > li {
+  border: red 5px solid;
+}
+
+/* Inline #1 | http://127.0.0.1:5502/w1/d5/selectors.html */
+
+/* Inline #1 | http://127.0.0.1:5502/w1/d5/selectors.html */
+
+.lab {
+  background-color: yellow;
+}
+
+.lab ~ li {
+  background-color: lightgreen;
+}
+
+.lab + li {
+  border-color: blue;
+}
+
+/* doesn't select our p because it's not the immediate sibling */
+h2 + p {
+  background-color: lightpink;
+}
