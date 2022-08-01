@@ -31,22 +31,24 @@ const saveFile = () => {
 }
 
 const chooseRandomStudent = (filter) => {
-  let choices = info
+  let choices = getActiveStudents()
   if (filter) {
-    choices = info.filter(filter)
+    choices = getActiveStudents().filter(filter)
   }
   const index = Math.floor(Math.random() * choices.length)
   return choices[index]
 }
 
 const getNextMorningSunshine = () => {
-  const sortedStudents = info.filter((x) => x.morningSunshine.date > new Date())
+  const sortedStudents = getActiveStudents().filter(
+    (x) => x.morningSunshine.date > new Date()
+  )
   sortedStudents.sort((a, b) => a.morningSunshine.date - b.morningSunshine.date)
   return sortedStudents[0]
 }
 
 const searchStudents = (searchTerm) => {
-  const student = info.find((s) => {
+  const student = getActiveStudents().find((s) => {
     return s.name.toLowerCase().includes(searchTerm.toLowerCase())
   })
   return student
@@ -169,22 +171,31 @@ const fisherYatesShuffle = (...array) => {
   return array
 }
 
-const splitIntoGroups = function* (array, groupSize) {
+const splitIntoGroups = function* (array, maxGroupSize) {
   let index = 0
+  const minGroupSize = maxGroupSize - 1
 
   while (index < array.length) {
-    yield array.slice(index, index + groupSize)
-    index += groupSize
+    const remaining = array.length - index
+
+    const size =
+      (remaining % maxGroupSize === 0) > 0 ? maxGroupSize : minGroupSize
+    yield array.slice(index, index + size)
+    index += size
   }
 }
 
+const getActiveStudents = () => {
+  return info.filter((x) => x.status !== 'deferred')
+}
+
 const getRandomGroups = (size) => {
-  Array.from(splitIntoGroups(fisherYatesShuffle(...info), size)).forEach(
-    (group, i) => {
-      const names = group.map((s) => s.name)
-      console.log(`Group ${i + 1}: ${names.join(', ')}`)
-    }
-  )
+  Array.from(
+    splitIntoGroups(fisherYatesShuffle(...getActiveStudents()), size)
+  ).forEach((group, i) => {
+    const names = group.map((s) => s.name)
+    console.log(`Group ${i + 1}: ${names.join(', ')}`)
+  })
 }
 
 const congratulate = (student) => {
@@ -242,7 +253,7 @@ const execute = async () => {
       viewStudentProject(student)
       break
     case 'list':
-      const students = info
+      const students = getActiveStudents()
       formatArg = args.shift()
       students.forEach((student) => console.log(format(student, formatArg)))
       break
