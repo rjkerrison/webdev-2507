@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Varela+Round&display=swap');
+
+@font-face {
+  font-family: 'Paddington';
+  src: url('../../../fonts/Paddington.otf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: 'Gideon Roman', cursive;
+}
+h2 {
+  font-size: 2rem;
+}
+body {
+  font-family: 'Varela Round', sans-serif;
+  padding: 2rem;
+  background-image: url('https://img.besthqwallpapers.com/Uploads/7-12-2017/32365/paddington-2-bear-2017-movie-poster-adventure.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+header h1 {
+  margin: 1rem 0;
+}
+
+main {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-image: linear-gradient(
+    45deg,
+    hsla(0, 32%, 59%, 0.719),
+    rgba(255, 255, 255, 0.541)
+  );
+  /* Auto left-right margin makes blocks centred */
+  margin: 0 auto;
+  width: 80vw;
+  height: 60vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+h2 {
+  font-family: 'Paddington';
+  font-size: 6rem;
+}
+
+p {
+  font-size: 4rem;
+  font-family: 'Paddington';
+  margin: 0;
+  animation: sway 2.5s ease-in-out alternate infinite;
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.125);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+picture {
+  display: block;
+  /* Centre images inside picture */
+  text-align: center;
+}
+
+picture img {
+  /* Let it be as wide as possible */
+  max-width: 100%;
+  /* Let it grow relative to its width */
+  height: auto;
+}
+
+li {
+  font-size: 3rem;
+}
+
+/* Inline #1 | http://127.0.0.1:5502/w1/d5/selectors.html */
+
+ol li {
+  color: purple;
+  text-decoration: underline;
+}
+
+ul > li {
+  border: red 5px solid;
+}
+
+button,
+input {
+  font-size: 4rem;
+  font-family: 'Paddington';
+  padding: 1rem;
+  border: none;
+  box-shadow: 0 0.5rem 0.25rem hsla(0, 32%, 59%, 0.719);
+  border-radius: 1rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+button:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1.5rem 0.5rem hsla(0, 32%, 59%, 0.719);
+}
+
+#red {
+  background-color: hsl(0, 58%, 60%);
+}
+#yellow {
+  background-color: hsl(60, 58%, 60%);
+}
+#green {
+  background-color: hsl(120, 58%, 60%);
+}
+.red,
+.yellow,
+.green {
+  background-color: rgba(0, 0, 0, 0.705);
+  width: min-content;
+  height: min-content;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.red {
+  color: hsl(0, 58%, 60%);
+}
+.yellow {
+  color: hsl(60, 58%, 60%);
+}
+.green {
+  color: hsl(120, 58%, 60%);
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.container > * {
+  flex: 20% 0 1;
+}
+
+/* Inline #1 | http://127.0.0.1:5502/w1/d5/selectors.html */
+
+/* Inline #1 | http://127.0.0.1:5502/w1/d5/selectors.html */
+
+.lab {
+  background-color: yellow;
+}
+
+.lab ~ li {
+  background-color: lightgreen;
+}
+
+.lab + li {
+  border-color: blue;
+}
+
+/* doesn't select our p because it's not the immediate sibling */
+h2 + p {
+  background-color: lightpink;
+}
