@@ -3,3 +3,7 @@
 Today, we'll see how we can use JavaScript to make changes to the Document Object Model, which is a web browser's model of our HTML documents.
 
 We call this **DOM manipulation**.
+
+## Additional resources
+
+- [Loops in the DOM Reference](https://codepen.io/rjkerrison/pen/OJXaeEM), shows how we can add list items to the DOM in a `for`, `for of` or `forEach` loop
