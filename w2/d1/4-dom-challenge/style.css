@@ -1,0 +1,8 @@
+.pokemon {
+	cursor: pointer;
+	transition: all 400ms ease-in-out;
+}
+
+.pokemon:hover {
+	color: red;
+}
