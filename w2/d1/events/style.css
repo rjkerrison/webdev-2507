@@ -10,7 +10,7 @@
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: calc(2rem + 2vw);
   font-family: 'Gideon Roman', cursive;
 }
 h2 {
@@ -47,9 +47,11 @@ main {
   justify-content: space-evenly;
   align-items: center;
 }
+
 h2 {
   font-family: 'Paddington';
-  font-size: 6rem;
+  font-size: calc(2rem + 1vw);
+  margin: 0;
 }
 
 p {
@@ -93,6 +95,20 @@ li {
 ol li {
   color: purple;
   text-decoration: underline;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  max-height: 50%;
+  gap: 0.25rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  align-items: center;
 }
 
 ul > li {
