@@ -13,6 +13,7 @@ Kicking off on 25th July 2022, we'll have 9 weeks to become full-stack web devel
   - [Script helpers](#script-helpers)
     - [Generating groups](#generating-groups)
     - [Checking morning sunshines](#checking-morning-sunshines)
+    - [Cloning lab repos](#cloning-lab-repos)
 
 ## Who's the team?
 
@@ -70,7 +71,7 @@ git stash pop
 
 ## Script helpers
 
-This repo comes with a script helper: `students.sh`. Run it and see.
+This repo comes with a script helper: `students.sh`. Run it and see. This is mainly intended for teaching team use.
 
 ### Generating groups
 
@@ -79,3 +80,9 @@ Run `./students.sh groups 3` to generate groups of three.
 ### Checking morning sunshines
 
 Run `./students.sh sunshine` to find out who is doing morning sunshine next!
+
+### Cloning lab repos
+
+If you want a list of commands that can clone all the lab forks for every student, run `./students.sh lab <lab-repo-name>`. E.g. `./students.sh lab lab-css-instagram-clone`.
+
+You can copy the printed commands and run them wherever you store cloned labs.
