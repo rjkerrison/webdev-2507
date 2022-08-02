@@ -1,0 +1,7 @@
+ol {
+	font-size: 20px;
+}
+
+ol > li {
+	margin-bottom: 10px;
+}

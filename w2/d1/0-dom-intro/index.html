@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./css/style.css" />
-		<title>Title !</title>
-		<script type="module" src="./js/index.js"></script>
-		<!-- Load a script after the content has been loaded with a defer keyword -->
-		<!-- <script defer src="./js/index.js"></script> -->
-		<script>
-			console.log("I am inside of the head!")
-		</script>
-	</head>
-	<body>
-		<h1 class="title">Hello world !</h1>
-		<!-- Loading a script after the whole content -->
-		<!-- <script src="./js/index.js"></script> -->
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Title !</title>
+    <!-- the module type, allow the script to be loaded after the html, and give it some more properties, see: -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules -->
+    <script type="module" src="./js/index.js"></script>
+    <!-- Load a script after the content has been loaded with a defer keyword -->
+    <!-- <script defer src="./js/index.js"></script> -->
+    <script>
+      console.log('I am inside of the head!')
+    </script>
+  </head>
+  <body>
+    <h1 class="title">Hello world !</h1>
+    <!-- Loading a script after the whole content -->
+    <!-- <script src="./js/index.js"></script> -->
+  </body>
 </html>

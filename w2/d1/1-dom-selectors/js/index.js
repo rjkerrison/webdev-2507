@@ -1,18 +1,29 @@
 // console.log(document.querySelector(".title"))
-
-const title = document.getElementById("title")
+/**
+ * Get an element with getElementById (the id you provide must match an element with that id in the HTML 😁)
+ */
+const title = document.getElementById('title')
 // console.log("title textContent", title.textContent)
+/**
+ * Adding some text to the Title, the html tags are not parsed, they are read as text.
+ */
+title.textContent += ' <span>JS</span> can modify stuffs!'
 
-title.textContent += " <span>JS</span> can modify stuffs!"
+/**
+ * Select the first section and store it in a variable
+ */
+const section = document.querySelector('section')
 
-const section = document.querySelector("section")
-const myStudents = section.querySelectorAll(".student")
-const studentsThroughClassName = section.getElementsByClassName("student")
-const myStudentList = section.querySelector(".students")
+/**
+ * Select all of the elements with a .student class that are inside of the section element
+ */
+const myStudents = section.querySelectorAll('.student')
+const studentsThroughClassName = section.getElementsByClassName('student')
+const myStudentList = section.querySelector('.students')
 
 myStudents.forEach((student) => console.log(`Hello ${student.textContent}`))
 const spreadedStudents = [...myStudents]
-spreadedStudents.map((student) => (student.textContent += " !!!"))
+spreadedStudents.map((student) => (student.textContent += ' !!!'))
 
 myStudentList.innerHTML += `<li class='student'>Guillaume</li>`
 
@@ -34,28 +45,44 @@ myStudentList.innerHTML += `<li class='student'>Guillaume</li>`
 // </ul>
 // `
 
-const paragraphes = document.querySelectorAll(".paragraph:not(.important)")
-console.log("paragraphes", paragraphes)
+/**
+ * Select all of the element with a class of `paragraph`, except the one that have an `important` class
+ */
+
+const paragraphes = document.querySelectorAll('.paragraph:not(.important)')
+console.log('paragraphes', paragraphes)
 paragraphes.forEach((paragraph) => {
-	paragraph.classList.add("not-important")
+  paragraph.classList.add('not-important')
 })
 
 document
-	.querySelector(".paragraph:nth-of-type(2)")
-	.classList.toggle("paragraph")
+  .querySelector('.paragraph:nth-of-type(2)')
+  .classList.toggle('paragraph')
 
-const importantParagraph = document.querySelector(".paragraph.important")
+const importantParagraph = document.querySelector('.paragraph.important')
 
+/**
+ * Modifying the style of the element in a CSS-like way
+ */
 importantParagraph.style = `
   font-size:3rem;
   font-weight:900;
   `
 
-importantParagraph.style.backgroundColor = "#ff0000"
+/**
+ * Modifying the style of a specific property of the element
+ */
+importantParagraph.style.backgroundColor = '#ff0000'
 
-importantParagraph.setAttribute("custom-attribute", "myValue")
+/**
+ * Set a custom attribute
+ */
+importantParagraph.setAttribute('custom-attribute', 'myValue')
 
-importantParagraph.dataset.paragraphName = "Lorem, again."
-importantParagraph.dataset.myNewKey = "some new value !."
+/**
+ * Modify / Read / Create some data-* attributes
+ */
+importantParagraph.dataset.paragraphName = 'Lorem, again.'
+importantParagraph.dataset.myNewKey = 'some new value !.'
 
 console.log(importantParagraph.dataset)
