@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Import the javaScript you need -->
+    <script type="module" src="./js/index.js"></script>
+    <title>Super game</title>
+  </head>
+  <body>
+    <main>
+      <header class="hidden">
+        <p>Timer: <span id="timer"></span></p>
+        <p>Score: <span id="score"></span></p>
+      </header>
+      <!-- The game has 3 states  -->
+      <!-- 1: Splash screen -->
+      <section id="start-screen">
+        <button id="start-button">Start</button>
+        <!-- <div class="target nice"></div> -->
+      </section>
+      <!-- 2: The actual game -->
+      <section id="game-screen" class="hidden"><h2>Game</h2></section>
+      <!-- 3: endgame screen -->
+      <section id="endgame-screen" class="hidden">
+        <h2>Endgame</h2>
+        <button id="reset-game">Play again?</button>
+      </section>
+    </main>
+  </body>
+</html>
