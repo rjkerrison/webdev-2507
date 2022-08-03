@@ -253,9 +253,11 @@ const execute = async () => {
       viewStudentProject(student)
       break
     case 'list':
-      const students = getActiveStudents()
-      formatArg = args.shift()
-      students.forEach((student) => console.log(format(student, formatArg)))
+      {
+        const students = getActiveStudents()
+        formatArg = args.shift()
+        students.forEach((student) => console.log(format(student, formatArg)))
+      }
       break
     case 'view':
       student = chooseRandomStudent()
@@ -273,6 +275,18 @@ const execute = async () => {
           student.morningSunshine.date
         )}: ${student.fullname}!`
       )
+      break
+    case 'lab':
+      {
+        const students = getActiveStudents()
+        const commands = students.map(
+          (s) =>
+            `gh repo clone ${s.github?.username || '???'}/${
+              args[0]
+            } ${s.name.toLowerCase()}/${args[0]}`
+        )
+        commands.forEach((command) => console.log(command))
+      }
       break
     default:
       help(mode)
