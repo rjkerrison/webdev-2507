@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Grid movement</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="grid-element">Title</h1>
+      <div class="sidebar-instructions grid-element column">
+        <h2>Instructions</h2>
+        <div>
+          <p>
+            Get every Zodiac signs to channel the power of Astrology and conquer
+            Germany!
+          </p>
+        </div>
+      </div>
+
+      <div class="game-grid grid-element"></div>
+
+      <div class="sidebar-controls grid-element column">
+        <h2>Zodiac collected:</h2>
+        <p>Score: <span id="score">0</span></p>
+        <hr />
+        <h2>Controls</h2>
+        <button id="start-game">Start</button>
+        <div id="prize" class="germany hidden">Prize!</div>
+      </div>
+      <footer class="grid-element">footer</footer>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
