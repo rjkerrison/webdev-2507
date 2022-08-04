@@ -4,4 +4,4 @@ Grids, movement on grids, and detection of collisions on grids are a major conce
 
 Florian showed a big example, find this at [./grid-movement](./grid-movement).
 
-Robin made a tiny one, find this at [./0-basic-grid](./basic-grid).
+Robin made a tiny one, find this at [./0-basic-grid](./0-basic-grid).
