@@ -2,6 +2,16 @@
 
 > Object Oriented Programming
 
+## Classes
+
+Classes can be seen as factories, that allow us to create multiple objects which might share some common properties but also have individual properties.
+For example, every car has 4 wheels, some windows, and a steering-wheel,
+but they may have different colours, by made by a different manufacturer, they may be a different models, etc.
+
+When we create an object based on a class, we call that a _class instance_. We call the creation of a class instance _instantiation_.
+
+### Declaration and constructor
+
 How to declare a Class?
 
 ```js
@@ -12,6 +22,10 @@ class MyClass {
   }
 }
 ```
+
+The `constructor` is the function that will run when we _instantiate_ the class.
+
+### Class methods
 
 How to declare a method inside of a class?
 
@@ -25,13 +39,10 @@ class MyClass {
 }
 ```
 
-Classes can be seen as factories, that allow us to create multiple objects which might share some common properties but also have individual properties.
-For example, every car has 4 wheels, some windows, and a steering-wheel,
-but they may have different colours, by made by a different manufacturer, they may be a different models, etc.
+## Subclasses and Inheritance
 
-When we create an object based on a class, we call that a _class instance_. We call the creation of a class instance _instantiation_.
-
-A class can inherit from another class. That _subclass_ receives all the properties and methods from the parent _super_ class.
+A class can inherit from another class.
+The _subclass_ receives all the properties and methods from the parent _super_ class.
 
 For a `Car` to inherit from `Vehicle`, the syntax would go like this:
 
@@ -40,6 +51,8 @@ class Car extends Vehicle {}
 ```
 
 Inside of the `constructor` of `Car`, it is required to use the [`super`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super) keyword to call the parent constructor.
+
+### Super
 
 The `super` keyword has two uses:
 
