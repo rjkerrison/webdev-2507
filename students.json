@@ -25,8 +25,8 @@
       "date": "2022-08-03T00:00:00.000Z"
     },
     "github": {
-      "username": "Lacharte",
-      "link": "https://github.com/Lacharte/"
+      "username": "AymericGoube",
+      "link": "https://github.com/AymericGoube/"
     }
   },
   {
@@ -47,9 +47,10 @@
       "date": "2022-08-25T00:00:00.000Z"
     },
     "github": {
-      "username": "AymericGoube",
-      "link": "https://github.com/AymericGoube/"
-    }
+      "username": "Lacharte",
+      "link": "https://github.com/Lacharte/"
+    },
+    "projects": ["Back-to-the-puzzle"]
   },
   {
     "name": "Hamza",
@@ -60,7 +61,8 @@
     "github": {
       "username": "HamzaZbili",
       "link": "https://github.com/HamzaZbili/"
-    }
+    },
+    "projects": ["Chicken-Game"]
   },
   {
     "name": "Igor",
@@ -123,6 +125,7 @@
     "morningSunshine": {
       "date": "2022-08-24T00:00:00.000Z"
     },
+    "projects": ["Bushido-survival"],
     "github": {
       "username": "Marly-Yasuke",
       "link": "https://github.com/Marly-Yasuke/"

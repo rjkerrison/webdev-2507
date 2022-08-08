@@ -102,8 +102,14 @@ const help = (mode) => {
   console.log(`Unknown mode: ${mode}`)
 }
 
+const viewStudentGithub = (student) => {
+  const url = githubUrl(student.github.username)
+  runner.exec(`open ${url}`)
+}
+
 const viewStudentProject = (student) => {
-  const url = githubUrl(student.projects[0].github)
+  const githubProject = `${student.github.username}/${student.projects[0]}`
+  const url = githubUrl(githubProject)
   runner.exec(`open ${url}`)
 }
 
@@ -248,7 +254,11 @@ const execute = async () => {
       student = searchStudents(args.shift())
       console.log(format(student, args.shift()))
       break
-    case 'search-and-view':
+    case 'github':
+      student = searchStudents(args.shift())
+      viewStudentGithub(student)
+      break
+    case 'project':
       student = searchStudents(args.shift())
       viewStudentProject(student)
       break
