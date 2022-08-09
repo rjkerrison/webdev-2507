@@ -14,6 +14,7 @@ Kicking off on 25th July 2022, we'll have 9 weeks to become full-stack web devel
     - [Generating groups](#generating-groups)
     - [Checking morning sunshines](#checking-morning-sunshines)
     - [Cloning lab repos](#cloning-lab-repos)
+    - [Viewing github profiles and projects](#viewing-github-profiles-and-projects)
 
 ## Who's the team?
 
@@ -86,3 +87,21 @@ Run `./students.sh sunshine` to find out who is doing morning sunshine next!
 If you want a list of commands that can clone all the lab forks for every student, run `./students.sh lab <lab-repo-name>`. E.g. `./students.sh lab lab-css-instagram-clone`.
 
 You can copy the printed commands and run them wherever you store cloned labs.
+
+### Viewing github profiles and projects
+
+Try running these to open up students' github profiles and repositories in your browser.
+
+```sh
+./students.sh github benjamin
+```
+
+```sh
+./students.sh project meryem
+```
+
+View all the project URLs with
+
+```sh
+./students.sh list table
+```
