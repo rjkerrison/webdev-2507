@@ -17,6 +17,9 @@ const enhanceStudent = (student) => {
     const date = new Date(student.morningSunshine.date)
     student.morningSunshine = { date }
   }
+  if (!student.projects) {
+    student.projects = []
+  }
 }
 info.forEach(enhanceStudent)
 
@@ -64,12 +67,11 @@ const format = (student, formatArg) => {
 
   if (formatArg === 'table') {
     return [
-      student.name,
-      '',
-      'My Game',
-      githubUrl((student.projects && student.projects[0]?.github) || '???'),
-      '',
-      student.projects && student.projects[0]?.deployment,
+      student.name.padEnd(15),
+      student.projects[0]
+        ? githubUrl(`${student.github.username}/${student.projects[0]}`)
+        : 'No project found',
+      // student.projects && student.projects[0]?.deployment,
     ].join('\t')
   }
 
@@ -111,6 +113,13 @@ const viewStudentProject = (student) => {
   const githubProject = `${student.github.username}/${student.projects[0]}`
   const url = githubUrl(githubProject)
   runner.exec(`open ${url}`)
+}
+
+const addProject = (student, project) => {
+  if (!project) {
+    return
+  }
+  student.projects.push(project)
 }
 
 const suspenseMessages = [
@@ -257,6 +266,10 @@ const execute = async () => {
     case 'github':
       student = searchStudents(args.shift())
       viewStudentGithub(student)
+      break
+    case 'add-project':
+      student = searchStudents(args.shift())
+      addProject(student, args.shift())
       break
     case 'project':
       student = searchStudents(args.shift())

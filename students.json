@@ -8,7 +8,10 @@
     "github": {
       "username": "agashjey",
       "link": "https://github.com/agashjey/"
-    }
+    },
+    "projects": [
+      "project1_NIGHT-VISION"
+    ]
   },
   {
     "name": "Arcadio",
@@ -16,7 +19,8 @@
     "morningSunshine": {
       "date": "2022-08-02T00:00:00.000Z"
     },
-    "status": "deferred"
+    "status": "deferred",
+    "projects": []
   },
   {
     "name": "Aymeric",
@@ -27,7 +31,10 @@
     "github": {
       "username": "AymericGoube",
       "link": "https://github.com/AymericGoube/"
-    }
+    },
+    "projects": [
+      "GalaxyShip"
+    ]
   },
   {
     "name": "Charlotte",
@@ -38,7 +45,10 @@
     "github": {
       "username": "challeau",
       "link": "https://github.com/challeau/"
-    }
+    },
+    "projects": [
+      "ekans"
+    ]
   },
   {
     "name": "Guillaume",
@@ -50,7 +60,9 @@
       "username": "Lacharte",
       "link": "https://github.com/Lacharte/"
     },
-    "projects": ["Back-to-the-puzzle"]
+    "projects": [
+      "Back-to-the-puzzle"
+    ]
   },
   {
     "name": "Hamza",
@@ -62,7 +74,9 @@
       "username": "HamzaZbili",
       "link": "https://github.com/HamzaZbili/"
     },
-    "projects": ["Chicken-Game"]
+    "projects": [
+      "Chicken-Game"
+    ]
   },
   {
     "name": "Igor",
@@ -73,7 +87,10 @@
     "github": {
       "username": "igormonteiro-dev",
       "link": "https://github.com/igormonteiro-dev/"
-    }
+    },
+    "projects": [
+      "spaceHero-Game"
+    ]
   },
   {
     "name": "Julien",
@@ -84,7 +101,10 @@
     "github": {
       "username": "Juliendrm",
       "link": "https://github.com/Juliendrm/"
-    }
+    },
+    "projects": [
+      "Project1"
+    ]
   },
   {
     "name": "Laurent",
@@ -95,7 +115,10 @@
     "github": {
       "username": "LauMttp",
       "link": "https://github.com/LauMttp/"
-    }
+    },
+    "projects": [
+      "arcade_climbing_game"
+    ]
   },
   {
     "name": "Benjamin",
@@ -106,7 +129,8 @@
     "github": {
       "username": "Benjamin-Mag",
       "link": "https://github.com/Benjamin-Mag/"
-    }
+    },
+    "projects": []
   },
   {
     "name": "Marko",
@@ -117,7 +141,10 @@
     "github": {
       "username": "MarkoI89",
       "link": "https://github.com/MarkoI89/"
-    }
+    },
+    "projects": [
+      "Battleship-Game"
+    ]
   },
   {
     "name": "Marly",
@@ -125,7 +152,9 @@
     "morningSunshine": {
       "date": "2022-08-24T00:00:00.000Z"
     },
-    "projects": ["Bushido-survival"],
+    "projects": [
+      "Bushido-survival"
+    ],
     "github": {
       "username": "Marly-Yasuke",
       "link": "https://github.com/Marly-Yasuke/"
@@ -140,7 +169,10 @@
     "github": {
       "username": "Meryembj",
       "link": "https://github.com/Meryembj/"
-    }
+    },
+    "projects": [
+      "ironDoll"
+    ]
   },
   {
     "name": "Paul",
@@ -151,7 +183,10 @@
     "github": {
       "username": "poollooo",
       "link": "https://github.com/poollooo/"
-    }
+    },
+    "projects": [
+      "geo-guesser-3d"
+    ]
   },
   {
     "name": "Sébastien",
@@ -162,7 +197,10 @@
     "github": {
       "username": "sebastienng",
       "link": "https://github.com/sebastienng/"
-    }
+    },
+    "projects": [
+      "dino-run-project"
+    ]
   },
   {
     "name": "Valéry",
@@ -173,7 +211,10 @@
     "github": {
       "username": "V-Nar",
       "link": "https://github.com/V-Nar/"
-    }
+    },
+    "projects": [
+      "Forgotten-Type-GameProject"
+    ]
   },
   {
     "name": "Walid",
@@ -184,7 +225,10 @@
     "github": {
       "username": "walid21",
       "link": "https://github.com/walid21/"
-    }
+    },
+    "projects": [
+      "project_BGDR_w3"
+    ]
   },
   {
     "name": "Yuan",
@@ -195,6 +239,9 @@
     "github": {
       "username": "yuanliuddd",
       "link": "https://github.com/yuanliuddd/"
-    }
+    },
+    "projects": [
+      "Sokoban-Mini"
+    ]
   }
 ]
