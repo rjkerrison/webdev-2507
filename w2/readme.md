@@ -13,3 +13,7 @@ Florian will be leading this week, and updating resources as we go.
 - [Day 3: Timing](./d3)
 - [Day 4: Grid Movement](./d4)
 - Day 5: Project Kickoff
+
+## Reinforcements
+
+See [notes from reinforcement](./0-reinforcement/)
