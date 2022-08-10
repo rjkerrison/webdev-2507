@@ -4,10 +4,29 @@ Hello WebDev Paris 2507!
 
 Kicking off on 25th July 2022, we'll have 9 weeks to become full-stack web developers.
 
+## Notes
+
+Find the notes you need by week:
+
+- [Week 1: Fundamentals](./w1)
+- [Week 2: Building Applications](./w2)
+- Week 3: Project 1: Building a Game
+- Week 4: Serving Data
+- Week 5: Advanced Backend
+- Week 6: Project 2: Building a REST API
+- Week 7: React Basics
+- Week 8: Integrating
+- Week 9: Project 3: Full-Stack Application
+
+To view the repository as notes, go to [rjkerrison.co.uk/webdev-2507](https://rjkerrison.co.uk/webdev-2507/).
+
+## Contents
+
 - [Welcome to WebDev 2507 Paris](#welcome-to-webdev-2507-paris)
+  - [Notes](#notes)
+  - [Contents](#contents)
   - [Who's the team?](#whos-the-team)
   - [Using this repository](#using-this-repository)
-    - [Notes](#notes)
     - [Staying up-to-date](#staying-up-to-date)
     - [In case of issues pulling latest changes](#in-case-of-issues-pulling-latest-changes)
   - [Script helpers](#script-helpers)
@@ -26,21 +45,14 @@ Your instructional team includes:
 
 ## Using this repository
 
-This repo will be updated at least daily. We'll have the latest examples from class, as well as a description of the day's main topics, and links to useful resources.
+This is a github repository full of notes, examples, and tools for Ironhack WebDev 2507.
 
-### Notes
+To view the repository on github, go to [github.com/rjkerrison/webdev-2507](https://github.com/rjkerrison/webdev-2507).
 
-We break the notes down by week.
-
-- [Week 1: Fundamentals](./w1)
-- [Week 2: Building Applications](./w2)
-- Week 3: Project 1: Building a Game
-- Week 4: Serving Data
-- Week 5: Advanced Backend
-- Week 6: Project 2: Building a REST API
-- Week 7: React Basics
-- Week 8: Integrating
-- Week 9: Project 3: Full-Stack Application
+The repository is updated at least daily.
+We'll have the latest examples from class,
+as well as a description of the day's main topics,
+and links to useful external resources.
 
 ### Staying up-to-date
 
