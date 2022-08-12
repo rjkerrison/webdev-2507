@@ -2,6 +2,7 @@
   {
     "name": "Agash",
     "fullname": "Agash Jeyakumar",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-09-09T00:00:00.000Z"
     },
@@ -10,12 +11,16 @@
       "link": "https://github.com/agashjey/"
     },
     "projects": [
-      "project1_NIGHT-VISION"
+      {
+        "name": "project1_NIGHT-VISION 🥷",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Arcadio",
     "fullname": "Arcadio Reyes",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-08-02T00:00:00.000Z"
     },
@@ -25,6 +30,7 @@
   {
     "name": "Aymeric",
     "fullname": "Aymeric Goube",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-08-03T00:00:00.000Z"
     },
@@ -33,12 +39,16 @@
       "link": "https://github.com/AymericGoube/"
     },
     "projects": [
-      "GalaxyShip"
+      {
+        "name": "GalaxyShip 🚀",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Charlotte",
     "fullname": "Charlotte Alleaume",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-08-16T00:00:00.000Z"
     },
@@ -47,12 +57,16 @@
       "link": "https://github.com/challeau/"
     },
     "projects": [
-      "ekans"
+      {
+        "name": "ekans 🐍",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Guillaume",
     "fullname": "Guillaume Chatriot",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-08-25T00:00:00.000Z"
     },
@@ -61,12 +75,16 @@
       "link": "https://github.com/Lacharte/"
     },
     "projects": [
-      "Back-to-the-puzzle"
+      {
+        "name": "Back-to-the-puzzle",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Hamza",
     "fullname": "Hamza Zbili",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-08-04T00:00:00.000Z"
     },
@@ -75,12 +93,16 @@
       "link": "https://github.com/HamzaZbili/"
     },
     "projects": [
-      "Chicken-Game"
+      {
+        "name": "Chicken-Game",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Igor",
     "fullname": "Igor Monteiro",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-08-19T00:00:00.000Z"
     },
@@ -89,12 +111,16 @@
       "link": "https://github.com/igormonteiro-dev/"
     },
     "projects": [
-      "SpaceWalk-Game"
+      {
+        "name": "SpaceWalk-Game",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Julien",
     "fullname": "Julien Benedet",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-08-15T00:00:00.000Z"
     },
@@ -103,12 +129,16 @@
       "link": "https://github.com/Juliendrm/"
     },
     "projects": [
-      "Project1"
+      {
+        "name": "Project1",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Laurent",
     "fullname": "Laurent Mouttapa",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-09-06T00:00:00.000Z"
     },
@@ -117,12 +147,17 @@
       "link": "https://github.com/LauMttp/"
     },
     "projects": [
-      "arcade_climbing_game"
+      {
+        "name": "arcade_climbing_game",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Benjamin",
     "fullname": "Benjamin Magnier",
+    "hasPresented": false,
+    "status": "deferred",
     "morningSunshine": {
       "date": "2022-08-22T00:00:00.000Z"
     },
@@ -131,12 +166,16 @@
       "link": "https://github.com/Benjamin-Mag/"
     },
     "projects": [
-      "Quizz-solo-Project"
+      {
+        "name": "Quizz-solo-Project",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Marko",
     "fullname": "Marko Ivezic",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-09-05T00:00:00.000Z"
     },
@@ -145,17 +184,24 @@
       "link": "https://github.com/MarkoI89/"
     },
     "projects": [
-      "Battleship-Game"
+      {
+        "name": "Battleship-Game",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Marly",
     "fullname": "Marly Diallo",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-08-24T00:00:00.000Z"
     },
     "projects": [
-      "Bushido-survival"
+      {
+        "name": "Bushido-survival",
+        "hasPresented": false
+      }
     ],
     "github": {
       "username": "Marly-Yasuke",
@@ -165,6 +211,7 @@
   {
     "name": "Meryem",
     "fullname": "Meryem Ben Jouda",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-08-01T00:00:00.000Z"
     },
@@ -173,12 +220,16 @@
       "link": "https://github.com/Meryembj/"
     },
     "projects": [
-      "ironDoll"
+      {
+        "name": "ironDoll",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Paul",
     "fullname": "Paul Nizet",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-09-08T00:00:00.000Z"
     },
@@ -187,12 +238,16 @@
       "link": "https://github.com/poollooo/"
     },
     "projects": [
-      "geo-guesser-3d"
+      {
+        "name": "geo-guesser-3d",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Sébastien",
     "fullname": "Sébastien Niang",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-08-23T00:00:00.000Z"
     },
@@ -201,12 +256,16 @@
       "link": "https://github.com/sebastienng/"
     },
     "projects": [
-      "dino-run-project"
+      {
+        "name": "dino-run-project",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Valéry",
     "fullname": "Valéry Narboni",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-09-07T00:00:00.000Z"
     },
@@ -215,12 +274,16 @@
       "link": "https://github.com/V-Nar/"
     },
     "projects": [
-      "Forgotten-Type-GameProject"
+      {
+        "name": "Forgotten-Type-GameProject",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Walid",
     "fullname": "Walid Jamili",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-08-17T00:00:00.000Z"
     },
@@ -229,12 +292,16 @@
       "link": "https://github.com/walid21/"
     },
     "projects": [
-      "project_BGDR_w3"
+      {
+        "name": "project_BGDR_w3",
+        "hasPresented": false
+      }
     ]
   },
   {
     "name": "Yuan",
     "fullname": "Yuan Liu",
+    "hasPresented": false,
     "morningSunshine": {
       "date": "2022-08-18T00:00:00.000Z"
     },
@@ -243,7 +310,10 @@
       "link": "https://github.com/yuanliuddd/"
     },
     "projects": [
-      "Sokoban-Mini"
+      {
+        "name": "Sokoban-Mini",
+        "hasPresented": false
+      }
     ]
   }
 ]
