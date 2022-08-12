@@ -213,8 +213,11 @@ const getRandomGroups = (size) => {
   })
 }
 
-const congratulate = (student) => {
-  console.log(`CONGRATULATIONS, ${student.name}! It's you!`)
+const congratulate = (student, project) => {
+  project.hasPresented = true
+  console.log(
+    `CONGRATULATIONS, ${student.name}! It's you! Let's play ${project.name}`
+  )
 }
 
 const evalProperty = (student, property) => {
@@ -251,8 +254,18 @@ const execute = async () => {
       break
     case 'suspense':
       await addSuspense()
-      student = chooseRandomStudent((s) => !s.hasPresented)
-      congratulate(student)
+      if (flags.includes('--m1')) {
+        student = chooseRandomStudent((s) => !s.projects[0].hasPresented)
+        return congratulate(student, student.projects[0])
+      } else if (flags.includes('--m2')) {
+        student = chooseRandomStudent((s) => !s.projects[1].hasPresented)
+        return congratulate(student, student.projects[1])
+      } else if (flags.includes('--m3')) {
+        student = chooseRandomStudent((s) => !s.projects[2].hasPresented)
+        return congratulate(student, student.projects[2])
+      }
+      // student = chooseRandomStudent((s) => !s.hasPresented)
+      // congratulate(student)
       break
     case 'random':
       student = chooseRandomStudent()
