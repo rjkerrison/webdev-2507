@@ -19,6 +19,4 @@ To prevent our code from stopping due to an external dependency running slowly, 
 We need to define the behaviour to perform as a consequence of the external task.
 Although [this is possible with callbacks](./3-asynchronicity/1-callbacks.js), we usually use [promises](./3-asynchronicity/2-promises.js).
 
-```js
-{% include_relative ./3-asynchronicity/2-promises.js %}
-```
+{% include_relative 3-asynchronicity/2-promises.html %}
