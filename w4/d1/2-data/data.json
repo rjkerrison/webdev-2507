@@ -1,0 +1,16 @@
+{
+  "princesses": [
+    "Jasmine",
+    "Tiana",
+    "Cinderella",
+    "Ariel",
+    "Rapunzel",
+    "Snow White"
+  ],
+  "movie": {
+    "name": "The Jungle Book",
+    "releaseYear": 1964,
+    "hasJulienSeenIt": false,
+    "liveActionActors": null
+  }
+}
