@@ -8,6 +8,10 @@ This is called **asynchronicity**.
 
 In our JavaScript applications, it will most often happen when fetching information from an external service, like an API or a database.
 
+## Callbacks
+
+Remember that callbacks allow us to customise the consequence of running a function.
+
 ## Promises
 
 JavaScript has a built-in class called Promise which is built for asynchronicity.
