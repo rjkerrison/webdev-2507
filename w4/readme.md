@@ -2,6 +2,8 @@
 
 This week, we'll see how the sausage gets made. We're looking at servers, how we talk to them, how we build them, and why they matter in the web.
 
-1. [Basic HTTP server in node](./d1/1-node-http-server/server.js)
-2. [Using JSON to store data](d1/2-data/data.js)
-3. [Weather API with Fetch](https://codepen.io/rjkerrison/pen/GRQxKyy)
+1. Day 1: [How the internet works, and asynchronicity](./d1)
+2. Day 2: [Express](./d2)
+3. Day 3: [MongoDB](./d3)
+4. Day 4: [Mongoose](./d4)
+5. Day 5: [Mongoose and Express](./d5)
