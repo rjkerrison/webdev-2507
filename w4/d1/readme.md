@@ -16,11 +16,4 @@ When communicating with the outside world, it is unknown how long a task can tak
 
 To prevent our code from stopping due to an external dependency running slowly, we run certain tasks _asynchonously_.
 
-We need to define the behaviour to perform as a consequence of the external task.
-Although [this is possible with callbacks](./3-asynchronicity/1-callbacks.js), we usually use [promises](./3-asynchronicity/2-promises.js).
-
-{% include_relative 3-asynchronicity/2-promises.html %}
-
-```js
-{% include_relative 3-asynchronicity/2-promises.js %}
-```
+For more on this, see [our notes about asynchronicity](./3-asynchronicity).

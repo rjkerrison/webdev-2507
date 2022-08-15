@@ -18,6 +18,9 @@ JavaScript has a built-in class called Promise which is built for asynchronicity
 
 Promises allow us to return a guarantee that a task is ongoing and allow us to chain side effects to the completion (or error) of that task.
 
+We need to define the behaviour to perform as a consequence of the external task.
+Although [this is possible with callbacks](./1-callbacks.js), we usually use [promises](./2-promises.js).
+
 ### `.then()`
 
 For when things complete normally, we can specify what to happen next with `.then()`.
@@ -26,11 +29,28 @@ For when things complete normally, we can specify what to happen next with `.the
 
 For when things go wrong, we can handle the bad with `.catch()`.
 
+```js
+{% include_relative 2-promises.js %}
+```
+
+### `async` and `await`
+
 ### `async` and `await`
 
 To make our code more linear, we can indicate that inside a function, we want to `await` a Promise.
 Essentially, this makes the rest of the code into a `.then()` callback.
 In practice, it means more readable code.
+
+We can also make things neater by [using `await` keyword when we want to wait for a promise to resolve](./3-async-await.js).
+
+```js
+{% include_relative 3-async-await.js %}
+```
+
+Remember these **two rules**:
+
+1. We can only use the `await` keyword inside an `async` function.
+2. Any `async` function returns a `Promise` when we call it.
 
 ## Troubleshoot guide
 
