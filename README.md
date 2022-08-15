@@ -11,7 +11,7 @@ Find the notes you need by week:
 - [Week 1: Fundamentals](./w1)
 - [Week 2: Building Applications](./w2)
 - Week 3: Project 1: Building a Game
-- Week 4: Serving Data
+- [Week 4: Serving Data](./w3)
 - Week 5: Advanced Backend
 - Week 6: Project 2: Building a REST API
 - Week 7: React Basics
