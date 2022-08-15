@@ -31,3 +31,26 @@ For when things go wrong, we can handle the bad with `.catch()`.
 To make our code more linear, we can indicate that inside a function, we want to `await` a Promise.
 Essentially, this makes the rest of the code into a `.then()` callback.
 In practice, it means more readable code.
+
+## Troubleshoot guide
+
+Having promise problems? Check below.
+
+### Forgotten `async`
+
+```js
+  const princess = await findPrincessAsync()
+                   ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+```
+
+If you see a message like the one above, check that your `function` has the `async` keyword before it.
+
+### Forgotten `await`
+
+```
+Hello, [object Promise]!
+```
+
+If you see console messages that contain `Promise`, you may have forgotten to `await` the promise.
