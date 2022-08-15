@@ -35,8 +35,6 @@ For when things go wrong, we can handle the bad with `.catch()`.
 
 ### `async` and `await`
 
-### `async` and `await`
-
 To make our code more linear, we can indicate that inside a function, we want to `await` a Promise.
 Essentially, this makes the rest of the code into a `.then()` callback.
 In practice, it means more readable code.
