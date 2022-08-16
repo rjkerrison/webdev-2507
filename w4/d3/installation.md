@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path/
+permalink: /:path/:basename/
 parent: MongoDB
 grand_parent: 'Week 4: Serving Data'
 nav_order: 1
