@@ -3,6 +3,7 @@ layout: default
 permalink: /:path/
 title: MongoDB
 parent: 'Week 4: Serving Data'
+has_children: true
 nav_order: 3
 ---
 
