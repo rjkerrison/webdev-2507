@@ -37,7 +37,7 @@ We have a lot of fields, with different types.
 
 | field      | type       | Donald Duck's value                                          |
 | ---------- | ---------- | ------------------------------------------------------------ |
-| `id`       | `number`   | `1947`                                                       |
+| `_id`      | `number`   | `1947`                                                       |
 | `films`    | `string[]` | `["The Three Caballeros", "Who Framed Roger Rabbit", etc]`   |
 | `tvShows`  | `string[]` | `["DuckTales", etc]`                                         |
 | `name`     | `string`   | `"Donald Duck"`                                              |
@@ -49,60 +49,133 @@ it makes sense to make the field names and types consistent across all documents
 
 If we want to filter for other characters who were in _Who Framed Roger Rabbit?_, it would be helpful if they also had a `films` field which is an array of strings.
 
+When we're creating a database collection,
+we define the rules and expectations about the data
+about the fields inside the documents.
+
+We call these expectations the **data model**.
+When we can describe the model in code, that code is known as a **schema**.
+
 ## Relations
 
-The core of any database is the four operations we need to perform:
+We can create relationships between our documents by having them refer to another document.
 
-- Create
-- Read
-- Update
-- Delete
+Imagine we have a _films_ collection.
 
-### Embedding
+```json
+{
+  "_id": 9978787,
+  "name": "Who Framed Roger Rabbit?",
+  "director": "Robert Zemeckis",
+  "releaseYear": 1986
+}
+```
 
-Starting from an empty collection, we need to _create_ our first record.
+We might want our Donald Duck to relate to this _Who Framed Roger Rabbit?_ instead of having a string.
 
-This is also known as an _insert_.
+How can we link Donald to Roger?
 
-Usually in a database, we will insert a new record into a particular named collection.
-This helps to organise data for later use.
+### The Foreign Id
 
-### Read
+The concept of a _foreign id_ is that we record the unique `_id` of a document from another collection as a way of referencing that document uniquely.
 
-Once we have available data, we usually want to see it.
-Retrieving data that has already been created from a database is known as _reading_.
+```json
+{
+  "_id": 1947,
+  "films": [9978787],
+  "name": "Donald Duck"
+}
+```
 
-This is also known as a _select_.
+In this way, whenever we need to know _more information_ about the films in which Donald Duck starred,
+we can use each film's id (e.g. `9978787`) to look up information about those films from the _films_ collection.
 
-**Reading isn't easy!**
-We have to specify exactly what we're looking for.
-We may be searching for many matching data,
-or alternatively we may be looking for a single datum by a unique identifier.
+## Embedding
 
-### Update
+With MongoDB, we can also have miniature documents inside of bigger documents.
 
-Often, we need to change an existing datum.
-We call this _updating_.
+```json
+{
+  "_id": 1947,
+  "films": [
+    {
+      "name": "Who Framed Roger Rabbit?",
+      "director": "Robert Zemeckis",
+      "releaseYear": 1986
+    }
+  ],
+  "name": "Donald Duck"
+}
+```
 
-Updating is complicated.
-It involves _selecting_ the right existing records,
-and applying a change.
+However, there are some flaws with this plan.
 
-### Delete
+### Duplication
 
-Sometimes, data is no longer useful, necessary, or desired.
-Othertimes, we are legally obligated to remove it.
+Embedding documents causes duplication.
 
-We can _delete_ data from our databases.
+```json
+[
+  {
+    "_id": 1947,
+    "films": [
+      {
+        "name": "Who Framed Roger Rabbit?",
+        "director": "Robert Zemeckis",
+        "releaseYear": 1986
+      }
+    ],
+    "name": "Donald Duck"
+  },
+  {
+    "_id": 1,
+    "films": [
+      {
+        "name": "Who Framed Roger Rabbit?",
+        "director": "Robert Zemeckis",
+        "releaseYear": 1986
+      }
+    ],
+    "name": "Mickey Mouse"
+  }
+]
+```
 
-This may also be called a _remove_ operation.
+We have stored information about Roger Rabbit twice!
 
-Deleting is **frighteningly easy**.
-When deleting, we have to be sure we're deleting the correct data.
-It is very easy to delete all the records in a collection accidentally.
+Duplication is bad for two reasons:
 
-The hard part is **deleting the right thing** – we need to be even more vigilant than when reading.
-It's advisable to use a unique identifier to find records when deleting.
+1. waste
+2. inconsistency
 
-[donald img]: https://static.wikia.nocookie.net/disney/images/d/db/Donald_Duck_Iconic.png
-[donald]: https://api.disneyapi.dev/characters/1947
+While both of these words are related to poop, in database terms, they are poop.
+
+We want to be efficient with our database, and refrain from storing the same thing twice or more.
+If we're storing the same information in many places, our database is not optimised,
+and we may be paying more than necessary, as well as having slower performance.
+Duplicating is a **waste** of our database's space and processing resources.
+
+We aim to have a _single source of truth_ for every piece of information.
+
+A _single source of truth_ is also good because we can query more easily,
+and when we update the single source of truth,
+we know that the information therein is still correct.
+
+When we have _multiple sources of truth_, we have to update all of them every time something changes,
+otherwise we will have **inconsistencies**.
+
+### Document size
+
+Another issue with embedding documents is the ballooning document size.
+
+If Donald has starred in 1000 films and each film has 16 kilobytes of information, then Donald's document size will surpass the 16 megabyte limit imposed by
+
+Even before hitting the limit, large documents are slower to process, to receive from the database, to update, and to send to API users.
+
+In summary, large documents are bad.
+
+### Querying embedded documents
+
+While it is possible to query embedded documents with MongoDB,
+it can be slower, it can be more difficult to build the queries,
+and duplication can waste our resources as we query the same information numerous times.
