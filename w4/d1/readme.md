@@ -2,6 +2,7 @@
 layout: default
 title: 'How the internet works, and asynchronicity'
 parent: 'Week 4: Serving Data'
+has_children: true
 nav_order: 1
 ---
 

@@ -1,3 +1,10 @@
+---
+layout: default
+parent: 'How the internet works, and asynchronicity'
+grand_parent: 'Week 4: Serving Data'
+nav_order: 1
+---
+
 # Asynchronicity
 
 Sometimes, we have a dependency on a process which may take a long time.
