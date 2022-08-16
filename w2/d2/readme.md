@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /:path
 title: Object-Oriented Programming
 parent: Week 2
 has_children: true

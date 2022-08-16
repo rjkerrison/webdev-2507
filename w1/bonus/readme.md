@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /:path
 title: Bonus
 parent: Week 1
 nav_order: 6

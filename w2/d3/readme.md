@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /:path
 title: Timing
 parent: Week 2
 nav_order: 3

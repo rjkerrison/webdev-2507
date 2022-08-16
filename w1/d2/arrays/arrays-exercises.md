@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /:path/:basename
 title: Arrays Exercises
 parent: Functions and Arrays
 grand_parent: Week 1

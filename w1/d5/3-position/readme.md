@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /:path
 title: Position
 parent: Layout and Animations
 grand_parent: Week 1

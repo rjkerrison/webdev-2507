@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /:path
 title: DOM Intro
 parent: The DOM
 grand_parent: Week 2

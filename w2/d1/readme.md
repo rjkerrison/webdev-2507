@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /:path
 title: The DOM
 parent: Week 2
 has_children: true

@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /:path
 title: Welcome
 permalink: '/'
 nav_order: -1

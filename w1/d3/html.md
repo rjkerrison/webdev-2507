@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /:path/:basename
 title: HTML
 parent: HTML and CSS
 grand_parent: Week 1

@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /:path
 title: Canvas and Audio
 parent: Week 2
 nav_order: 6

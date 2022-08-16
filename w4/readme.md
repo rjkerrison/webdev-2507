@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /:path
 title: 'Week 4: Serving Data'
 has_children: true
 nav_order: 4

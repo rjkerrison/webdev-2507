@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /:path
 title: Express
 parent: 'Week 4: Serving Data'
 nav_order: 2
