@@ -1,3 +1,10 @@
+---
+layout: default
+title: Bonus
+parent: Week 1
+nav_order: 6
+---
+
 # Bonus Exercise
 
 From the template provided, and using what we've learnt this week about:

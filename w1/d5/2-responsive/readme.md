@@ -1,3 +1,11 @@
+---
+layout: default
+title: Responsive Web Design
+parent: Layout and Animations
+grand_parent: Week 1
+nav_order: 2
+---
+
 # Responsive Web Design
 
 Responsive web design is all about making one webpage which responds to the user agent to give users the best style.

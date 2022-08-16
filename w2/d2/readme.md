@@ -1,3 +1,11 @@
+---
+layout: default
+title: Object-Oriented Programming
+parent: Week 2
+has_children: true
+nav_order: 2
+---
+
 # OOP and Classes
 
 > Object Oriented Programming

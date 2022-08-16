@@ -1,3 +1,10 @@
+---
+layout: default
+title: Learning
+parent: Week 1
+nav_order: 1
+---
+
 # Notes on how to learn
 
 For a lot of us, a bootcamp like this is the first time we've been in education since school or university.

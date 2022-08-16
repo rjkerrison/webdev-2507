@@ -16,6 +16,7 @@ fetch('../students.json')
     }
 
     const ul = document.createElement('ul')
+    ul.classList.add('students')
 
     getActiveStudents().forEach((student) => {
       console.log(student)

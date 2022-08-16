@@ -1,3 +1,11 @@
+---
+layout: default
+title: The DOM
+parent: Week 2
+has_children: true
+nav_order: 1
+---
+
 # Week 2 Day 1: The DOM
 
 Today, we'll see how we can use JavaScript to make changes to the Document Object Model, which is a web browser's model of our HTML documents.

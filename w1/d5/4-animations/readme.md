@@ -1,3 +1,11 @@
+---
+layout: default
+title: Transitions and Animations
+parent: Layout and Animations
+grand_parent: Week 1
+nav_order: 4
+---
+
 # Transitions and Animations
 
 CSS Transitions and Animations break down into a few ideas:

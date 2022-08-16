@@ -1,8 +1,16 @@
+---
+layout: default
+title: DOM Selectors
+parent: The DOM
+grand_parent: Week 2
+nav_order: 2
+---
+
 # DOM selectors
 
 DOM selectors allow you to select HTML elements from the DOM, all of the elements have access to different properties / methods.
 
-Here is a small tailored list of the most usefull ones:
+Here is a small tailored list of the most useful ones:
 
 - `document.querySelector(cssSelector)`
 - `document.querySelectorAll(cssSelector)`

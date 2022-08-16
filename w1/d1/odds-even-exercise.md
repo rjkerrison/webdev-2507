@@ -1,3 +1,10 @@
+---
+layout: default
+parent: Intro to JS
+grand_parent: Week 1
+nav_order: 1
+---
+
 # Odds/Even Exercise
 
 In pairs, your task is to write a small JavaScript file which prints out twenty lines like the following:

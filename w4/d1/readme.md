@@ -1,3 +1,10 @@
+---
+layout: default
+title: 'How the internet works, and asynchronicity'
+parent: 'Week 4: Serving Data'
+nav_order: 1
+---
+
 # Week 4 Day 1: How the internet works, and asynchronicity
 
 Kicking off module 2, we looked at the core technology underpinning the World Wide Web, and how our webpages can dynamically access data through it.

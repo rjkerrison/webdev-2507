@@ -1,3 +1,11 @@
+---
+layout: default
+title: Arrays exercise
+parent: Higher order functions
+grand_parent: Week 1
+nav_order: 2
+---
+
 # Arrays exercise
 
 In groups of three, you will be assigned one of the following groups:

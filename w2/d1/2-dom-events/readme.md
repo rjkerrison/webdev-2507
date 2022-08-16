@@ -1,3 +1,11 @@
+---
+layout: default
+title: DOM Events
+parent: The DOM
+grand_parent: Week 2
+nav_order: 3
+---
+
 # DOM Events
 
 Adding an event listener is pretty straightforward, select an element with a `selector` and use the `addEventListener` function to this element.
