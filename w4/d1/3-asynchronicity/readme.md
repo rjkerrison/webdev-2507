@@ -50,6 +50,22 @@ Remember these **two rules**:
 1. We can only use the `await` keyword inside an `async` function.
 2. Any `async` function returns a `Promise` when we call it.
 
+#### `try` and `catch`
+
+The normal way to handle errors in JavaScript is to wrap error-prone code inside a `try` block, and to `catch` any potential errors.
+
+When using `async` and `await`, our code is similar to normal synchronous code, and so we can also use `try` and `catch` for error handling.
+
+### Chaining vs nesting
+
+When using `.then()`, we want to avoid _nesting_ our promises, because it makes our code harder to read and to maintain. If we have a second promise, we can return it, and _chain_ the `.then()` calls.
+
+Take a look at [the example about chaining vs nesting](./4-chaining.js).
+
+```js
+{% include_relative 4-chaining.js %}
+```
+
 ## Troubleshoot guide
 
 Having promise problems? Check below.
