@@ -10,3 +10,7 @@ nav_order: 3
 # Week 4 Day 3: MongoDB
 
 Today, we are seeing a database for the first time.
+
+First of all: [recap time][recap].
+
+[recap]: (./cfu.html)
