@@ -311,11 +311,15 @@ const execute = async () => {
         day: 'numeric',
         weekday: 'long',
       })
+      student
+      ?
       console.log(
         `Next morning sunshine, on ${formatter.format(
           student.morningSunshine.date
         )}: ${student.fullname}!`
       )
+      :
+      console.log(`No more morning sunshines :(`)
       break
     case 'lab':
       {
