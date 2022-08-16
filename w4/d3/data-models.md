@@ -3,7 +3,7 @@ layout: default
 permalink: /:path/:basename/
 parent: MongoDB
 grand_parent: 'Week 4: Serving Data'
-nav_order: 3
+nav_order: 4
 ---
 
 # Data Models
@@ -179,3 +179,31 @@ In summary, large documents are bad.
 While it is possible to query embedded documents with MongoDB,
 it can be slower, it can be more difficult to build the queries,
 and duplication can waste our resources as we query the same information numerous times.
+
+## Complex relationships
+
+Relations can come in one or many forms:
+
+- one-to-one
+- one-to-many
+- many-to-many
+
+### One-to-One
+
+A one-to-one relationship would be the relationship between my email address and my facebook account.
+
+A one-to-one relationship is represented either by embedding the information,
+or if separate documents are preferred for another reason,
+with
+
+### One-to-many
+
+A one-to-many relationship would be the relationship between an customer and an order.
+
+Each customer can make many orders, but each order is made by only one customer.
+
+The easiest way to represent a one-to-many relationship is with a foreign id field.
+
+## Conclusion
+
+If in doubt, favour a _relation_.
