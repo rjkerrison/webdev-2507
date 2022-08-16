@@ -13,4 +13,4 @@ Today, we are seeing a database for the first time.
 
 First of all: [recap time][recap].
 
-[recap]: (./cfu.html)
+[recap]: ./cfu.html
