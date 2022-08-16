@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path/:basename
+permalink: /:path/:basename/
 title: Learning
 parent: Week 1
 nav_order: 1

@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path/:basename
+permalink: /:path/:basename/
 title: Arrays exercise
 parent: Higher order functions
 grand_parent: Week 1

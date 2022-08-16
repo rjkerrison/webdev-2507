@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path
+permalink: /:path/
 title: 'How the internet works, and asynchronicity'
 parent: 'Week 4: Serving Data'
 has_children: true

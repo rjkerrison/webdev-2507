@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path
+permalink: /:path/
 parent: 'How the internet works, and asynchronicity'
 grand_parent: 'Week 4: Serving Data'
 nav_order: 1

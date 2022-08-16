@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path
+permalink: /:path/
 title: Layout and Animations
 parent: Week 1
 has_children: true

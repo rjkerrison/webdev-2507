@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path
+permalink: /:path/
 parent: Object-Oriented Programming
 grand_parent: Week 2
 nav_order: 5

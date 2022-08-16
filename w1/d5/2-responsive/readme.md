@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path
+permalink: /:path/
 title: Responsive Web Design
 parent: Layout and Animations
 grand_parent: Week 1

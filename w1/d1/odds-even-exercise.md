@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path/:basename
+permalink: /:path/:basename/
 parent: Intro to JS
 grand_parent: Week 1
 nav_order: 1

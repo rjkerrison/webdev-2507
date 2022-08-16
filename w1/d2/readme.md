@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path
+permalink: /:path/
 title: Functions and Arrays
 parent: Week 1
 has_children: true

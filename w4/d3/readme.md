@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path
+permalink: /:path/
 title: MongoDB
 parent: 'Week 4: Serving Data'
 nav_order: 3

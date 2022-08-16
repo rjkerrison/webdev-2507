@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path
+permalink: /:path/
 title: DOM Events
 parent: The DOM
 grand_parent: Week 2

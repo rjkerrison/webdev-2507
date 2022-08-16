@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path/:basename
+permalink: /:path/:basename/
 title: Intro to JS
 parent: Week 1
 has_children: true
