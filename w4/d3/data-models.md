@@ -44,6 +44,9 @@ We have a lot of fields, with different types.
 | `url`      | `string`   | A URL for [Donald Duck on Disney API][donald]                |
 | `imageUrl` | `string`   | A URL for this incredible image: ![Donald Image][donald img] |
 
+[donald]: https://api.disneyapi.dev/characters/1947
+[donald img]: https://static.wikia.nocookie.net/disney/images/d/db/Donald_Duck_Iconic.png
+
 For our data to be useful to API users (developers, including us!),
 it makes sense to make the field names and types consistent across all documents in our collection.
 
