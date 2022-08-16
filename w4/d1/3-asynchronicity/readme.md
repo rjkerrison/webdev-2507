@@ -20,6 +20,12 @@ In our JavaScript applications, it will most often happen when fetching informat
 
 Remember that callbacks allow us to customise the consequence of running a function.
 
+```js
+{% include_relative 1-callbacks.js %}
+```
+
+This is often helpful, but we would prefer to have the option to customise the consequential behaviour of a task after starting it.
+
 ## Promises
 
 JavaScript has a built-in class called Promise which is built for asynchronicity.
