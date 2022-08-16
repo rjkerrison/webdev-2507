@@ -2,6 +2,8 @@
 
 Today, we are going to build an Express server on NodeJS.
 
+But first up, a [recap of yesterday](./checks-for-understanding.html)!
+
 ## Setup your project
 
 ### Create a workspace
