@@ -42,9 +42,27 @@ const chooseRandomStudent = (filter) => {
   return choices[index]
 }
 
-const getNextMorningSunshine = () => {
+const getMorningSunshine = (date) => {
+  const today = new Date().setHours(0,0,0,0)
+
+  if (date) {
+    const dateArray = date.split(`-`)
+    
+    if (dateArray.every(x => parseInt(x) !== NaN)) {
+      dateArray.length === 1
+      ?
+      date = today + 86400000 * date
+      :
+      date = new Date(`${new Date().getFullYear()}-${date}`)
+    }
+  }
+  
+  if (!date?.valueOf()) {
+    date = today
+  }
+
   const sortedStudents = getActiveStudents().filter(
-    (x) => x.morningSunshine.date > new Date()
+    (x) => x.morningSunshine.date >= date
   )
   sortedStudents.sort((a, b) => a.morningSunshine.date - b.morningSunshine.date)
   return sortedStudents[0]
@@ -287,25 +305,28 @@ const execute = async () => {
       viewStudentProject(student)
       break
     case 'sunshine':
-      student = getNextMorningSunshine()
+      student = getMorningSunshine(args[0])
       const formatter = Intl.DateTimeFormat('fr-FR', {
         month: 'long',
         day: 'numeric',
         weekday: 'long',
       })
+      student
+      ?
       console.log(
         `Next morning sunshine, on ${formatter.format(
           student.morningSunshine.date
         )}: ${student.fullname}!`
       )
+      :
+      console.log(`No more morning sunshines :(`)
       break
     case 'lab':
       {
         const students = getActiveStudents()
         const commands = students.map(
           (s) =>
-            `gh repo clone ${s.github?.username || '???'}/${
-              args[0]
+            `gh repo clone ${s.github?.username || '???'}/${args[0]
             } ${s.name.toLowerCase()}/${args[0]}`
         )
         commands.forEach((command) => console.log(command))

@@ -1,3 +1,10 @@
+---
+layout: default
+title: Welcome
+permalink: '/'
+nav_order: -1
+---
+
 # Welcome to WebDev 2507 Paris
 
 Hello WebDev Paris 2507!

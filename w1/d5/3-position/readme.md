@@ -1,3 +1,11 @@
+---
+layout: default
+title: Position
+parent: Layout and Animations
+grand_parent: Week 1
+nav_order: 3
+---
+
 # Position
 
 CSS _position_ is all about making small adjustments to an element's position, fixing things to the page, or setting them near the edge of their container.

@@ -1,3 +1,11 @@
+---
+layout: default
+title: Flexbox
+parent: Layout and Animations
+grand_parent: Week 1
+nav_order: 1
+---
+
 # Flexbox
 
 Take a look at [flexbox demo](./index.html).

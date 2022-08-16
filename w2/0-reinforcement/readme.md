@@ -1,3 +1,10 @@
+---
+layout: default
+title: Reinforcement
+parent: Week 2
+nav_order: 6
+---
+
 # Week 2 Reinforcement
 
 We looked at

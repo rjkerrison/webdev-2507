@@ -1,3 +1,11 @@
+---
+layout: default
+title: Inputs
+parent: The DOM
+grand_parent: Week 2
+nav_order: 4
+---
+
 # Inputs
 
 - The most important thing about input is that you can't access it's textContent, you will need to access the `value` of the input to get any information.

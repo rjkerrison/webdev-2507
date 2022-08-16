@@ -1,3 +1,11 @@
+---
+layout: default
+title: Intro to JS
+parent: Week 1
+has_children: true
+nav_order: 2
+---
+
 # Intro to JS
 
 We'll be taking a look together at the basics of JavaScript.

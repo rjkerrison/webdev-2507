@@ -1,3 +1,11 @@
+---
+layout: default
+title: Arrays Exercises
+parent: Functions and Arrays
+grand_parent: Week 1
+nav_order: 1
+---
+
 # Arrays Exercises
 
 1. List out 5 of your classmates in an array declaration.

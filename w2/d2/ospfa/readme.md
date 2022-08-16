@@ -1,3 +1,10 @@
+---
+layout: default
+parent: Object-Oriented Programming
+grand_parent: Week 2
+nav_order: 5
+---
+
 # Open Source Pocket Fighting Animals
 
 Try playing this game with

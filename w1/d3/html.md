@@ -1,3 +1,11 @@
+---
+layout: default
+title: HTML
+parent: HTML and CSS
+grand_parent: Week 1
+nav_order: 2
+---
+
 # HTML
 
 Our goals are to know how to:

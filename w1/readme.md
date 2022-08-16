@@ -1,4 +1,11 @@
-# Week 1
+---
+layout: default
+title: Week 1
+has_children: true
+nav_order: 1
+---
+
+# Week 1: Fundamentals
 
 Welcome to WebDev!
 

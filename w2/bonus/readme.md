@@ -1,3 +1,10 @@
+---
+layout: default
+title: Canvas and Audio
+parent: Week 2
+nav_order: 6
+---
+
 # Bonus
 
 There's always more to learn about HTML, CSS, and JavaScript.

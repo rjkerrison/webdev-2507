@@ -1,3 +1,11 @@
+---
+layout: default
+title: Layout and Animations
+parent: Week 1
+has_children: true
+nav_order: 5
+---
+
 # Day 5
 
 Day 5 is all about design.

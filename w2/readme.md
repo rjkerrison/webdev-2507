@@ -1,3 +1,10 @@
+---
+layout: default
+title: Week 2
+has_children: true
+nav_order: 2
+---
+
 # Week 2: Building Applications
 
 Week 2 is all about bringing it all together: JavaScript and the DOM.

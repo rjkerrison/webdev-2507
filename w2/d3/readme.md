@@ -1,3 +1,10 @@
+---
+layout: default
+title: Timing
+parent: Week 2
+nav_order: 3
+---
+
 # Day 3: Timing
 
 Take a look at:

@@ -1,12 +1,22 @@
-### What is the DOM?
+---
+layout: default
+title: DOM Intro
+parent: The DOM
+grand_parent: Week 2
+nav_order: 1
+---
 
-The Document Object Model (DOM) is an [API (Application Programming Interface)](https://en.wikipedia.org/wiki/Application_programming_interface) for HTML and XML documents. It provides a **structured representation of the document (web page) and defines a way that the structure can be accessed from JavaScript**. This allows us to change the document structure, style or the content from JavaScript!
+# What is the DOM?
+
+The Document Object Model (DOM) is an [API (Application Programming Interface)](https://en.wikipedia.org/wiki/Application_programming_interface) for HTML and XML documents.
+
+It provides a **structured representation of the document (web page) and defines a way that the structure can be accessed from JavaScript**. This allows us to change the document structure, style or the content from JavaScript!
 
 The DOM provides a representation of the document as a structured group of nodes and objects that have **properties** and **methods**.
 
 Essentially, the DOM connects web pages to scripts or programming languages.
 
-### What is a Web page?
+## What is a Web page?
 
 A Web page is a document. This document can be either displayed in the browser (window) or as the HTML source. But it is the **same document** in both cases.
 
@@ -18,15 +28,11 @@ The Document Object Model (DOM) provides another way to represent, store and man
 
 The [W3C DOM standard](http://www.w3.org/DOM/) forms the basis of the DOM implemented in most modern browsers. Many browsers offer extensions beyond the W3C standard, so you have to be careful when using them on the web where documents may be accessed by various browsers with different DOMs.
 
-### A Tree?
+## A Tree?
 
 The DOM represents a document as a tree. The tree is made up of parent-child relationships. One parent can have one or many children nodes.
 
-<br>
-
 ![](https://i.imgur.com/m08deQC.png)
-
-<br>
 
 ## A List of DOM Properties and Methods
 
