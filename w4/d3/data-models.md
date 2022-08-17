@@ -193,11 +193,17 @@ Relations can come in one or many forms:
 
 ### One-to-One
 
-A one-to-one relationship would be the relationship between my email address and my facebook account.
+A one-to-one relationship would be the relationship between my user account and my profile information.
 
 A one-to-one relationship is represented either by embedding the information,
 or if separate documents are preferred for another reason,
-with
+with foreign id relationships.
+
+A decision has to be made about which side of the one-to-one relationship should store the foreign id of the other.
+
+We could have our _user_ record refer to the _profile_ id in a field, or we could have the _profile_ refer to the _user_.
+In this case, it's up for debate!
+I would personally prefer to keep the _user_ record as clean as possible, so any additional user-related information would refer to the _users_ collection, instead of the other way around.
 
 ### One-to-many
 
@@ -205,8 +211,57 @@ A one-to-many relationship would be the relationship between an customer and an 
 
 Each customer can make many orders, but each order is made by only one customer.
 
-The easiest way to represent a one-to-many relationship is with a foreign id field.
+The easiest way to represent a one-to-many relationship is with a foreign id field on the _one_ side of thing.
+This means we would have each _order_ referencing one and only one _customer_ id.
+
+If we need to find all the many orders for a customer,
+we would query the orders collection for that customer id.
+
+### Many-to-many
+
+A many-to-many relationship would be the relationship between an actor and a film.
+
+Each actor may have starred in many films. Each film may have starred many actors.
+
+When we have a many-to-many relationship, we have two options:
+
+1. Store an array of foreign ids on one of the records
+2. Create a _link model_ between the two.
+
+Storing an array of foreign ids is okay when we have a small number of records,
+say a list of immediate family members for a person.
+It doesn't work for a large list,
+for instance a list of every contact they've had in the past 7 days.
+
+#### What's a _link model_?
+
+In our case, we might create a new _FilmCastMember_ collection, where each record looks like this:
+
+```js
+{
+    _id: 812356335
+    film: 91981,
+    actor: 581298
+}
+```
+
+The idea is that we link the films to the actors by creating a record that references them both.
+
+Linking models this way allows us to easily query for these many-to-many relationships.
+We can use a film id to find all the actors for that film.
+We can use an actor id to find all the films for that actor.
+
+This is the preferred way of dealing with many-to-many relationships.
+It keeps the original records small, it allows for only getting the linked information when it's necessary, and for querying that information separately.
+
+Other examples of a many-to-many relationship include:
+
+- following a user
+- favourited recipes
+- products in an order
 
 ## Conclusion
 
-If in doubt, favour a _relation_.
+If in doubt, favour a _relation_ to embedding.
+
+When creating many-to-many relationships, create a link to represent those.
