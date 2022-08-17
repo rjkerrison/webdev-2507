@@ -50,7 +50,8 @@ We have a lot of fields, with different types.
 For our data to be useful to API users (developers, including us!),
 it makes sense to make the field names and types consistent across all documents in our collection.
 
-If we want to filter for other characters who were in _Who Framed Roger Rabbit?_, it would be helpful if they also had a `films` field which is an array of strings.
+If we want to filter for other characters who were in _Who Framed Roger Rabbit?_,
+it would be helpful if they also had a `films` field which is an array of strings.
 
 When we're creating a database collection,
 we define the rules and expectations about the data
