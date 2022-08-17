@@ -10,6 +10,21 @@ nav_order: 4
 
 Modelling data is easy to do.
 
+- [Data Models](#data-models)
+  - [Relations](#relations)
+    - [The Foreign Id](#the-foreign-id)
+  - [Embedding](#embedding)
+    - [Duplication](#duplication)
+    - [Document size](#document-size)
+    - [Querying embedded documents](#querying-embedded-documents)
+  - [Complex relationships](#complex-relationships)
+    - [One-to-One](#one-to-one)
+    - [One-to-many](#one-to-many)
+    - [Many-to-many](#many-to-many)
+      - [What's a _link model_?](#whats-a-link-model)
+  - [Conclusion](#conclusion)
+  - [Exercise Time!](#exercise-time)
+
 We want to think about our data as little JSON documents, with fields.
 
 ```json
@@ -266,3 +281,30 @@ Other examples of a many-to-many relationship include:
 If in doubt, favour a _relation_ to embedding.
 
 When creating many-to-many relationships, create a link to represent those.
+
+## Exercise Time!
+
+Let’s practice modelling!
+We'll pair up and implement a model for the following scenarios.
+
+In this exercise, deciding what fields go into which collection is not as important
+as the relations between them.
+Focus on deciding whether to use relations or embed documents.
+
+- Twitter
+  - Users
+  - Tweets
+  - Followers
+  - Favorites
+- Airbnb
+  - Users
+  - Homes
+  - Bookings
+  - Reviews
+- Spotify
+  - Users
+  - Artists
+  - Songs
+  - Albums
+  - Genres
+  - Favorites
