@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /:path/
-title: 'Reinforcement: Week 4'
+title: 'Reinforcement'
 parent: 'Week 4: Serving Data'
 nav_order: 6
 ---
