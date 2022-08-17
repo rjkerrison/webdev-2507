@@ -120,3 +120,19 @@ We can exclude fields explicitly with 0.
 ```
 { name: 1, films: 1, _id: 0 }
 ```
+
+## Further reading
+
+The MongoDB documentation is great at explaining how querying works,
+and all the operations.
+
+<ul>
+<li class="raw"><a href="https://docs.mongodb.com/v3.2/crud/" target="_blank" rel="noopener noreferrer">Mongo CRUD Documentation</a></li>
+<li class="raw"><a href="https://docs.mongodb.com/v3.2/reference/operator/query/#query-selectors" target="_blank" rel="noopener noreferrer">Query selectors in MongoDB</a></li>
+<li class="raw"><a href="https://docs.mongodb.com/v3.2/reference/" target="_blank" rel="noopener noreferrer">Reference Operators</a></li>
+<li class="raw"><a href="https://docs.mongodb.com/compass/master/query-bar/#querying" target="_blank" rel="noopener noreferrer">Mongo Compass Querying</a></li>
+<li class="raw"><a href="https://docs.mongodb.com/manual/reference/operator/query/" target="_blank" rel="noopener noreferrer">Query Operators</a></li>
+<li class="raw"><a href="https://docs.mongodb.com/manual/reference/operator/query-array/" target="_blank" rel="noopener noreferrer">Query Operators for Arrays</a></li>
+<li class="raw"><a href="https://docs.mongodb.com/manual/reference/operator/query-element/" target="_blank" rel="noopener noreferrer">Query Operators for Elements</a></li>
+<li class="raw"><a href="https://docs.mongodb.com/manual/reference/operator/query-comparison/" target="_blank" rel="noopener noreferrer">Query Operators for Comparison</a></li>
+</ul>
