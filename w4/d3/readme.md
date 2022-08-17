@@ -13,4 +13,7 @@ Today, we are seeing a database for the first time.
 
 First of all: [recap time][recap].
 
+We'll complete the [advanced MongoDB querying lab][lab] in the afternoon.
+
 [recap]: ./cfu.html
+[lab]: https://github.com/ironhack-labs/lab-advance-querying-mongo
