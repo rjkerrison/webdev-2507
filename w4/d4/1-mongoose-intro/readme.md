@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path/:basename/
+permalink: /:path/
 parent: Mongoose
 grand_parent: 'Week 4: Serving Data'
 nav_order: 2
