@@ -227,8 +227,8 @@ A one-to-many relationship would be the relationship between an customer and an 
 
 Each customer can make many orders, but each order is made by only one customer.
 
-The easiest way to represent a one-to-many relationship is with a foreign id field on the _one_ side of thing.
-This means we would have each _order_ referencing one and only one _customer_ id.
+The easiest way to represent a one-to-many relationship is with a foreign id field on the _many_ side of thing.
+This means each of the _many_ orders would reference _one_ and only one customer id.
 
 If we need to find all the many orders for a customer,
 we would query the orders collection for that customer id.
