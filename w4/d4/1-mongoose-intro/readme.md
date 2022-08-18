@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /:path/:basename/
+permalink: /:path/
 parent: Mongoose
 grand_parent: 'Week 4: Serving Data'
 nav_order: 2
@@ -30,7 +30,7 @@ Install `mongoose` in your project folder using `npm install mongoose`
 
 Connecting to the database is one of the first thing your server should do.
 
-```JavaScript
+```js
 const { default: mongoose } = require('mongoose')
 
 const MONGO_URI = 'mongodb://localhost:27017/database_name'
