@@ -30,7 +30,7 @@ Install `mongoose` in your project folder using `npm install mongoose`
 
 Connecting to the database is one of the first thing your server should do.
 
-```JavaScript
+```js
 const { default: mongoose } = require('mongoose')
 
 const MONGO_URI = 'mongodb://localhost:27017/database_name'
