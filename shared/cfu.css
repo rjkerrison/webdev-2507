@@ -163,26 +163,26 @@ body {
 }
 
 section:nth-of-type(7n) {
-  background-color: hsl(280, 49%, 42%);
+  background-color: hsl(280, 59%, 42%);
 }
 section:nth-of-type(7n + 1) {
-  background-color: hsl(230, 49%, 42%);
+  background-color: hsl(230, 59%, 42%);
 }
 section:nth-of-type(7n + 2) {
-  background-color: hsl(130, 49%, 42%);
+  background-color: hsl(130, 59%, 42%);
 }
 section:nth-of-type(7n + 6) {
-  background-color: hsl(330, 49%, 42%);
+  background-color: hsl(330, 59%, 42%);
 }
 section:nth-of-type(7n + 4) {
-  background-color: hsl(0, 49%, 42%);
+  background-color: hsl(0, 59%, 42%);
 }
 section:nth-of-type(7n + 5) {
-  background-color: hsl(50, 69%, 62%);
+  background-color: hsl(50, 79%, 62%);
   color: black;
 }
 section:nth-of-type(7n + 3) {
-  background-color: hsl(30, 49%, 42%);
+  background-color: hsl(300, 69%, 42%);
 }
 
 ol li {
