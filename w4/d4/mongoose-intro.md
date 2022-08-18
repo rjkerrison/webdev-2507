@@ -70,4 +70,16 @@ module.exports = model('myCollection', mySchema)
 
 ## Creating your Schema
 
-Our Schema is empty in the previous example,
+Here are the finished examples from the lesson:
+
+> Person model
+
+```js
+{% include_relative models/Person.model.js  %}
+```
+
+> RubberDuck model
+
+```js
+{% include_relative models/RubberDuck.model.js %}
+```

@@ -85,3 +85,9 @@ const {
   // allCitiesInRussia => ['St-Petersburg', 'Moskow']
   // otherInformations => {name: 'Raspoutine', age: 47}
 ```
+
+> Course examples
+
+```js
+{% include_relative 0-destructuring.js %}
+```
