@@ -14,7 +14,8 @@ Today, we are going to view the destructuring syxntax and then see how to use mo
 - Connect to the Database
 - Create Schema, Model and collection
 
-[destructuring](destructuring.md)
-[mongoose](mongoose-intro.md)
+1- [destructuring](destructuring.md)
+
+2- [mongoose](mongoose-intro.md)
 
 We'll complete the [advanced MongoDB querying lab][lab] in the afternoon.
