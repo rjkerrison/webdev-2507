@@ -3,10 +3,10 @@ layout: default
 permalink: /:path/:basename/
 parent: Express and Mongoose
 grand_parent: 'Week 4: Serving Data'
-nav_order: 1
+nav_order: 2
 ---
 
-# Examples
+# Snippets
 
 Here are examples of each CRUD operation in express and mongoose.
 
