@@ -53,8 +53,16 @@ mongoose
   .connect('mongodb://localhost/ducky-2507')
   .then(async (db) => {
     console.log(`Connected to ${db.connection.name}`)
+
+    /**
+     * DELETE operations
+     */
     await RubberDuck.deleteMany()
     await Person.deleteMany()
+
+    /**
+     * CREATE operations
+     */
     const student = await Person.create(computerScienceStudent)
     const myDuck = await RubberDuck.create({
       ...oneRubberDuck,
@@ -65,6 +73,9 @@ mongoose
     const theOtherDucks = await RubberDuck.create(arrayOfDucks)
     // console.log('theOtherDucks', theOtherDucks)
 
+    /**
+     * READ Operations
+     */
     const iWantToDeleteYou = await RubberDuck.findOne({ name: 'Awe3' })
     // console.log(iWantToDeleteYou)
     // console.log('woodenDucks', woodenDucks)
@@ -72,9 +83,7 @@ mongoose
     const woodenDucks = await RubberDuck.find({ material: 'wood' })
 
     /**
-     * findByIdAndUpdate
-     * findOneAndUpdate
-     * findAndUpdate
+     * UPDATE Operations
      */
     const updatedDuck = await RubberDuck.findOneAndUpdate(
       {

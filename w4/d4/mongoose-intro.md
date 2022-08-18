@@ -83,3 +83,9 @@ Here are the finished examples from the lesson:
 ```js
 {% include_relative models/RubberDuck.model.js %}
 ```
+
+> Script
+
+```js
+{% include_relative mongoose.js %}
+```
