@@ -23,6 +23,8 @@ Today, we will learn to
 
 Let's **CRUD** this!
 
+But first: let's [recap for week 4](./cfu.html)!
+
 ## Creating
 
 When a user makes a _POST_ request to our server,
@@ -48,17 +50,16 @@ A database is not for storing images, but it can store an _imageUrl_ field.
 
 A database is not for storing videos, but it can store a _videoUrl_ field.
 
-### Creating inside a route
+## Reading
 
-It looks like this.
+When a user makes a _GET_ request,
+we usually want to read documents from our database.
 
-```js
-router.post('/restaurants', (req, res) => {
-  const { name, cuisine, rating } = req.body
-  const restaurant = await Restaurant.create({
-    name,
-    cuisine,
-    rating,
-  })
-})
-```
+## Updating
+
+If a user makes a _PUT_, it's time to update a database document.
+
+## Deleting
+
+If the user makes a _DELETE_ request, guess what we're going to do!
+That's right, we'll delete a database document.
