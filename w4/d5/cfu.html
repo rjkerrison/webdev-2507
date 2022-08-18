@@ -1,10 +1,13 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Week 4 Recap</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css"
@@ -39,6 +42,8 @@
         hljs.highlightAll()
       })
     </script>
+
+    {% include head_custom.html %}
   </head>
   <body>
     <div id="root"></div>
@@ -57,7 +62,14 @@
       }
 
       const questions = [
-        <h2>Backend Week 1 Recap</h2>,
+        <h2 class="paddington">Backend Basics Recap</h2>,
+        <h2>How does a frontend get up-to-date data?</h2>,
+        <h2>How do we handle asynchronicity in JavaScript?</h2>,
+        <h2>What protocol does web traffic use?</h2>,
+        <h2>
+          What do we call a backend that listens for incoming HTTP calls?
+        </h2>,
+        <h2>In what format do we send data from our REST API?</h2>,
         <h2>What is a database?</h2>,
         <h2>Which database do we use?</h2>,
         <h2>
@@ -70,6 +82,10 @@
         <h2>What is a projection?</h2>,
         <h2>How else can we specify query results?</h2>,
         <h2>What is a data model?</h2>,
+        <h2>What is an ODM?</h2>,
+        <h2>Which ODM did we use?</h2>,
+        <h2>Which class did we import from the mongoose module?</h2>,
+        <h2>Where should we store our mongoose schemas?</h2>,
         <>
           <h2>What's this doing?</h2>
           <pre>
@@ -98,13 +114,47 @@
         </>,
         <h2>How can we relate one data model to another?</h2>,
         <h2>
-          Where should we put a foreign id on the one-to-many relationship?
+          Where should we store the foreign id in a one-to-many relationship?
         </h2>,
         <h2>In what circumstances can we embed documents?</h2>,
-        <h2>What is an ODM?</h2>,
-        <h2>Which ODM did we use?</h2>,
-        <h2>Which class did we import from the mongoose module?</h2>,
+        <>
+          <h2>What's this doing?</h2>
+          <pre>
+            <code lang="javascript">
+              {`const photographSchema = new Schema({
+  title: Schema.Types.String,
+  imageUrl: Schema.Types.String,
+  artist: { type: Schema.Types.ObjectID, ref: 'Artist' },
+})`}
+            </code>
+          </pre>
+          <p>
+            What is <code>ref</code> doing?
+          </p>
+        </>,
+        <>
+          <h2>What's this doing?</h2>
+          <pre>
+            <code lang="javascript">
+              {`const Photograph = model('Photograph', photographSchema)`}
+            </code>
+          </pre>
+          <p>What collection name would we see in MongoDB Compass?</p>
+        </>,
         <h2>What do we create to facilitate many-to-many relationships?</h2>,
+        <>
+          <h2>Why does this allow a many-to-many relationship?</h2>
+          <pre>
+            <code lang="javascript">
+              {`const attractionVisitSchema = new Schema({
+  guest: { type: Schema.Types.ObjectID, ref: 'Guest' },
+  attraction: { type: Schema.Types.ObjectID, ref: 'Attraction' },
+  boardingTime: Schema.Types.Date
+})`}
+            </code>
+          </pre>
+          <p>How would we find all attractions visited by a guest?</p>
+        </>,
         <h2>What are we doing today?</h2>,
         <h2>The end!</h2>,
       ]
