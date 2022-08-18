@@ -15,7 +15,7 @@ Today, we are going to view the destructuring syxntax and then see how to use mo
 - Create Schema, Model and collection
 
 1. [Destructuring](./destructuring.md)
-2. [Mongoose](./mongoose-intro.md)
+2. [Mongoose](./1-mongoose-intro/readme.md)
 
 We'll complete the [Mongoose recipes lab][lab] in the afternoon.
 
