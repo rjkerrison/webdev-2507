@@ -5,6 +5,10 @@ const app = express()
 const setupApp = require('./config')
 setupApp(app)
 
+// Add custom error handling
+const addErrorHandling = require('./error-handling')
+addErrorHandling(app)
+
 // Connect to database
 require('./db')
 
