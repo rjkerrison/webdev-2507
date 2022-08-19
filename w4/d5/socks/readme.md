@@ -25,8 +25,8 @@ Todo list:
 - [x] routes
   - [x] Create socks
   - [x] Read socks
-  - [ ] Update socks
-  - [ ] Delete socks
+  - [x] Update socks
+  - [x] Delete socks
 
 ## The code
 
