@@ -10,11 +10,11 @@ Todo list:
 - [ ] Creating database
 - [ ] Connect to the database
 - [ ] Add some socks info
-- [ ] js entry point (app.js)
-  - [ ] create an express app
-  - [ ] listen
-- [ ] routes
-  - [ ] Create socks
-  - [ ] Read socks
+- [x] js entry point (app.js)
+  - [x] create an express app
+  - [x] listen
+- [x] routes
+  - [x] Create socks
+  - [x] Read socks
   - [ ] Update socks
   - [ ] Delete socks
