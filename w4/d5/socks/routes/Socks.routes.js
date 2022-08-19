@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
   })
   console.log('createdSock', createdSock)
 
-  res.json({ sock: createdSock })
+  res.status(201).json({ sock: createdSock })
 })
 
 // PATCH /socks/:id
