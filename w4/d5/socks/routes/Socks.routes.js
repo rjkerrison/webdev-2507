@@ -16,16 +16,20 @@ router.get('/:id', async (req, res) => {
 })
 
 // POST /socks
-router.post('/', async (req, res) => {
-  const newSock = req.body
-  const createdSock = await Sock.create({
-    name: newSock.name,
-    colour: newSock.colour,
-    foot: newSock.foot,
-  })
-  console.log('createdSock', createdSock)
+router.post('/', async (req, res, next) => {
+  try {
+    const newSock = req.body
+    const createdSock = await Sock.create({
+      name: newSock.name,
+      colour: newSock.colour,
+      foot: newSock.foot,
+    })
+    console.log('createdSock', createdSock)
 
-  res.status(201).json({ sock: createdSock })
+    res.status(201).json({ sock: createdSock })
+  } catch (error) {
+    next(error)
+  }
 })
 
 // PATCH /socks/:id
