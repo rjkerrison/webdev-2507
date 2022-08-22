@@ -1,0 +1,180 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 4 Recap</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../shared/cfu.css" />
+
+    <!-- Load Babel - used to parse JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- React's core library-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- ReactDOM library renders the content created with React to the DOM. -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"
+      integrity="sha512-BNc7saQYlxCL10lykUYhFBcnzdKMnjx5fp5s5wPucDyZ7rKNwCoqJh1GwEAIhuePEK4WM9askJBRsu7ma0Rzvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../../shared/cfu.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        console.log('Loaded', hljs)
+        hljs.highlightAll()
+      })
+    </script>
+
+    {% include head_custom.html %}
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const Picture = ({ filename }) => {
+        return (
+          <>
+            <div className="picture-container">
+              <picture>
+                <img src={`./images/${filename}`} alt={filename} />
+              </picture>
+            </div>
+          </>
+        )
+      }
+
+      const questions = [
+        <h2 class="paddington">Backend Basics Recap</h2>,
+        <h2>How does a frontend get up-to-date data?</h2>,
+        <h2>How do we handle asynchronicity in JavaScript?</h2>,
+        <h2>What protocol does web traffic use?</h2>,
+        <h2>
+          What do we call a backend that listens for incoming HTTP calls?
+        </h2>,
+        <h2>In what format do we send data from our REST API?</h2>,
+        <h2>What is a database?</h2>,
+        <h2>Which database do we use?</h2>,
+        <h2>
+          What is the structure of a Mongo database, starting from the top
+          level?
+        </h2>,
+        <h2>What is the maximum document size?</h2>,
+        <h2>What is a query?</h2>,
+        <h2>What is a filter?</h2>,
+        <h2>What is a projection?</h2>,
+        <h2>How else can we specify query results?</h2>,
+        <h2>What is a data model?</h2>,
+        <h2>What is an ODM?</h2>,
+        <h2>Which ODM did we use?</h2>,
+        <h2>Which class did we import from the mongoose module?</h2>,
+        <h2>Where should we store our mongoose schemas?</h2>,
+        <>
+          <h2>What's this doing?</h2>
+          <pre>
+            <code lang="javascript">
+              {`mongoose.connect("mongodb://localhost/disney", () => {
+  console.log('connected to mongodb')
+})`}
+            </code>
+          </pre>
+        </>,
+        <>
+          <h2>What's this doing?</h2>
+          <pre>
+            <code lang="javascript">
+              {`router.get('/albums/:id', function (req, res) {
+  const album = albums.find((album) => {
+    return album.id === req.params.id
+  })
+  res.json({
+    album
+  })
+})`}
+            </code>
+          </pre>
+          <p>What will we see as a result?</p>
+        </>,
+        <h2>How can we relate one data model to another?</h2>,
+        <h2>
+          Where should we store the foreign id in a one-to-many relationship?
+        </h2>,
+        <h2>In what circumstances can we embed documents?</h2>,
+        <>
+          <h2>What's this doing?</h2>
+          <pre>
+            <code lang="javascript">
+              {`const photographSchema = new Schema({
+  title: Schema.Types.String,
+  imageUrl: Schema.Types.String,
+  artist: { type: Schema.Types.ObjectID, ref: 'Artist' },
+})`}
+            </code>
+          </pre>
+          <p>
+            What is <code>ref</code> doing?
+          </p>
+        </>,
+        <>
+          <h2>What's this doing?</h2>
+          <pre>
+            <code lang="javascript">
+              {`const Photograph = model('Photograph', photographSchema)`}
+            </code>
+          </pre>
+          <p>What collection name would we see in MongoDB Compass?</p>
+        </>,
+        <h2>What do we create to facilitate many-to-many relationships?</h2>,
+        <>
+          <h2>Why does this allow a many-to-many relationship?</h2>
+          <pre>
+            <code lang="javascript">
+              {`const attractionVisitSchema = new Schema({
+  guest: { type: Schema.Types.ObjectID, ref: 'Guest' },
+  attraction: { type: Schema.Types.ObjectID, ref: 'Attraction' },
+  boardingTime: Schema.Types.Date
+})`}
+            </code>
+          </pre>
+          <p>How would we find all attractions visited by a guest?</p>
+        </>,
+        <h2>What are we doing today?</h2>,
+        <h2>The end!</h2>,
+      ]
+
+      const QuestionSection = ({ element }) => <section>{element}</section>
+
+      ReactDOM.render(
+        <>
+          <header>
+            <h1>Week 4 Recap</h1>
+          </header>
+          <main>
+            {questions.map((q, i) => (
+              <QuestionSection element={q} key={i} />
+            ))}
+          </main>
+        </>,
+        document.getElementById('root'),
+        () => hljs.highlightAll()
+      )
+    </script>
+  </body>
+</html>
