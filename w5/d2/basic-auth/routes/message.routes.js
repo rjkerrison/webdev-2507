@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const Message = require('../models/Message.model.js')
 const mongoose = require('mongoose')
+const { isAuthenticated, isAdmin } = require('../middleware/middlewares.js')
 
 /**
  * All routes are prefixed with /message
@@ -9,14 +10,14 @@ const mongoose = require('mongoose')
 // /message/jshikt564b5h6rea41s/hgwjairlnbkjrb46816a
 // /message/sender/jshikt564b5h6rea41s/receiver/hgwjairlnbkjrb46816a
 router.post(
-  '/sender/:senderId/receiver/:receiverId',
+  '/receiver/:receiverId',
+  isAuthenticated,
+  isAdmin,
   async (req, res, next) => {
+    console.log('In the protected route ', req.user)
     try {
-      const { senderId, receiverId } = req.params
-      if (
-        !mongoose.isValidObjectId(senderId) ||
-        !mongoose.isValidObjectId(receiverId)
-      ) {
+      const { receiverId } = req.params
+      if (!mongoose.isValidObjectId(receiverId)) {
         return res.status(400).json({ message: `Please provide a valid Id` })
       }
       const { content } = req.body
@@ -26,7 +27,7 @@ router.post(
 
       const messageToCreate = {
         content,
-        author: senderId,
+        author: req.user._id,
         receiver: receiverId,
       }
       const createdMessage = await Message.create(messageToCreate)
