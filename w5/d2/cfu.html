@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css"
+      integrity="sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z4nvW1dqK0SKXLbn9h4KwZTNtAyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../shared/cfu.css" />
+    <style>
+      section:nth-of-type(4n) {
+        background-color: hsl(320, 49%, 42%);
+      }
+      section:nth-of-type(4n + 1) {
+        background-color: hsl(230, 49%, 42%);
+      }
+      section:nth-of-type(4n + 2) {
+        background-color: hsl(140, 49%, 42%);
+      }
+      section:nth-of-type(4n + 3) {
+        background-color: hsl(30, 49%, 42%);
+      }
+    </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"
+      integrity="sha512-BNc7saQYlxCL10lykUYhFBcnzdKMnjx5fp5s5wPucDyZ7rKNwCoqJh1GwEAIhuePEK4WM9askJBRsu7ma0Rzvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../../shared/cfu.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        console.log('Loaded', hljs)
+        hljs.highlightAll()
+      })
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Monday Morning Quiz</h1>
+    </header>
+    <main>
+      <section><h2>Obligatory title slide</h2></section>
+      <section>
+        <h2>Is this code in the front-end or back-end?</h2>
+        <pre><code lang="js" class="language-js"
+            >app.get('/home', (request, response, next) => {
+    response.json({ success: true })
+})</code></pre>
+      </section>
+      <section>
+        <h2>Is this code in the front-end or back-end?</h2>
+        <pre><code lang="js" class="language-js"
+            >app.get('/home', (request, response, next) => {
+    console.log(request)
+    response.send('&lt;h1&gt;Our first express app&lt;/h1&gt;')
+})</code></pre>
+      </section>
+      <section>
+        <h2>Is this code in the front-end or the back-end?</h2>
+        <pre><code lang="js"
+            >const resultElement = document.querySelector('p#result')</code></pre>
+      </section>
+      <section>
+        <h2>What about <em>this code</em>?</h2>
+        <pre><code lang="js"
+            >if (target &lt; now) {
+    element.textContent = 'NOW'
+} else {
+    setInterval(() =&gt; setTime(target, element), 500)
+}</code></pre>
+      </section>
+      <section>
+        <h2>What about <em>this code</em>?</h2>
+        <pre><code lang="css"
+            >.special a {
+    color: rgba(211, 190, 69);
+}</code></pre>
+      </section>
+      <section>
+        <h2>Okay, last one:</h2>
+        <pre><code lang="js"
+            >const schema = new mongoose.Schema({
+    name: { type: String, unique: true },
+    address: addressSchema,
+})</code></pre>
+      </section>
+      <section>
+        <h2>How do we chain promises (instead of nesting them)?</h2>
+      </section>
+      <section>
+        <h2>
+          Which do you prefer, <code>await</code> or <code>.then()</code>?
+        </h2>
+      </section>
+      <section>
+        <h2>What's the difference between mongo and mongoose?</h2>
+      </section>
+      <section>
+        <h2>What is a model, and where does it live?</h2>
+      </section>
+      <section>
+        <h2>What's a route?</h2>
+      </section>
+      <section>
+        <h2>How do we install a third-party dependency?</h2>
+      </section>
+      <section>
+        <h2>What does populate do?</h2>
+      </section>
+      <section>
+        <h2>
+          How do we access the form data from a POST request in our back-end?
+        </h2>
+      </section>
+      <section>
+        <h2>
+          How do we access the route parameters (a part of the URL which will
+          change) ?
+        </h2>
+      </section>
+      <section>
+        <h2>
+          How do we access the query parameters from a GET request in our
+          back-end?
+        </h2>
+      </section>
+      <section>
+        <h2>What the heck is this code doing?</h2>
+        <pre><code lang="js">app.use(express.json())
+app.use(express.urlencoded({ extended: true }))</code></pre>
+      </section>
+      <section>
+        <h2>What is the most important attribute a developer can have?</h2>
+      </section>
+      <section>
+        <h2>The End</h2>
+      </section>
+    </main>
+  </body>
+</html>
