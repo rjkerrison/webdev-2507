@@ -9,3 +9,9 @@ nav_order: 5
 # Week 5: Advanced Backend
 
 Now that we're great at backend basics, we can go deeper into backend concepts.
+
+1. Day 1: [Express generators and populate()](./d1)
+2. Day 2: [Authentication, Authorization](./d2)
+<!-- 3. Day 3: [MongoDB](./d3)
+3. Day 4: [Mongoose](./d4)
+4. Day 5: [Mongoose and Express](./d5) -->

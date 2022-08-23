@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /:path/
+title: 'Basic-auth'
 parent: 'Week 5: Advanced Backend'
 has_children: true
 nav_order: 2
@@ -15,7 +16,7 @@ Today we'll see
 - [user creation endpoints (sign up)](#steps-to-create-a-user)
 - [user authentication endpoints (log in)](#steps-to-login-a-user)
 - [protected routes](#protecting-a-route)
-  - `isAuthenticated` middleware
+  - [`isAuthenticated` middleware](#isauthenticated-middleware)
 - user roles
 
 ## Steps to create a user
@@ -51,14 +52,12 @@ The request is the same object for each middleware/route handler over the reques
 
 The `next` function, when invoked with no arguments will go to the next middleware.
 
-<!--
-```js
-{% include_relative  %}
-```
- -->
-
 ### isAuthenticated middleware
 
 We would like to verify if someone is authenticated / logged in.
 Since we are using a token based authentication, the client need to send his token in the `headers` of the `request`, under the `authorization` key.
 We will then verify the token and authorize (or not) the user.
+
+```js
+{% include_relative basic-auth/middleware/middlewares.js %}
+```
