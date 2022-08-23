@@ -10,8 +10,10 @@ const userSchema = new Schema(
     },
     email: {
       type: Schema.Types.String,
+      required:true
     },
-    password: Schema.Types.String,
+    password: {type:Schema.Types.String,
+    required:true},
     phoneNumber: Schema.Types.Number,
   },
   {
