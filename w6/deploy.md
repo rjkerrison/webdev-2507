@@ -3,7 +3,7 @@ layout: default
 permalink: /:path/:basename
 title: 'Deploying to heroku'
 parent: 'Project week'
-has_children: true
+has_children: false
 nav_order: 2
 ---
 
@@ -26,7 +26,7 @@ nav_order: 2
 
 ## Create a shared Cluster
 
-- Pick AWS || Google Cloud || Azure
+- Pick AWS | Google Cloud | Azure
 - Select the location closest to you
 - Cluster Tier, no change
 - Additional settings, no change
