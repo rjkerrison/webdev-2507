@@ -24,6 +24,10 @@ Our REST APIs will
 
 You may also need a seeding script, depending on your project.
 
+## [How to collaborate](collaboration-101.md)
+
+## [How to deploy to Heroku and Atlas](deploy.md)
+
 ## Previous Examples
 
 - [Fooderr][fooderr docs]

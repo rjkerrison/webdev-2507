@@ -5,17 +5,19 @@ const authRoute = require('./auth.routes')
 /* GET home page */
 
 // router.use('/', consoleLogger)
-router.get('/',consoleLogger, (req, res, next) => {
+router.get('/', consoleLogger, (req, res, next) => {
   console.log(req.students)
-  res.json({ message: 'Everything is fine so far!' })
+  res.redirect('/api/something')
 })
 
+router.get('/something', (req, res, next) => {
+  res.send('Success!')
+})
 
-function consoleLogger (req, res, next) {
+function consoleLogger(req, res, next) {
   req.students = ['Agash', 'Julien']
   next()
 }
-
 
 router.use('/users', usersRouter)
 router.use('/message', messageRouter)
