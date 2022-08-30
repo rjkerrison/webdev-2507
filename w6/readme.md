@@ -1,7 +1,9 @@
 ---
 layout: default
 permalink: /:path/
+title: 'Project week'
 nav_order: 6
+has_children: true
 ---
 
 # Project 2

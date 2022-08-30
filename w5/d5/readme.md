@@ -3,8 +3,7 @@ layout: default
 permalink: /:path/:basename
 title: 'File upload'
 parent: 'Week 5: Advanced Backend'
-has_children: true
-nav_order: 4
+nav_order: 3
 ---
 
 # Uploading Files
