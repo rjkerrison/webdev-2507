@@ -21,10 +21,10 @@ Find the notes you need by week:
 - [Week 3: Project 1: Building a Game](./w3)
 - [Week 4: Serving Data](./w4)
 - [Week 5: Advanced Backend](./w5)
-- Week 6: Project 2: Building a REST API
-- Week 7: React Basics
-- Week 8: Integrating
-- Week 9: Project 3: Full-Stack Application
+- [Week 6: Project 2: Building a REST API](./w6)
+- [Week 7: React Basics](./w7)
+- [Week 8: Integrating](./w8)
+- [Week 9: Project 3: Full-Stack Application](./w9)
 
 To view the repository as notes, go to [rjkerrison.co.uk/webdev-2507](https://rjkerrison.co.uk/webdev-2507/).
 

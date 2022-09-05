@@ -2,7 +2,7 @@
 layout: default
 permalink: /:path/:basename
 title: 'Collaboration'
-parent: 'Project week'
+parent: Project 2
 has_children: false
 nav_order: 1
 ---

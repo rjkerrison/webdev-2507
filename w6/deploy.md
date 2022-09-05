@@ -2,7 +2,7 @@
 layout: default
 permalink: /:path/:basename
 title: 'Deploying to heroku'
-parent: 'Project week'
+parent: Project 2
 has_children: false
 nav_order: 2
 ---
