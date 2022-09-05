@@ -1,3 +1,5 @@
 remote_theme: just-the-docs/just-the-docs
 exclude:
-  - node_modules
+  - w4/d5/socks/node_modules/
+  - w4/d4/1-mongoose-intro/node_modules/
+  - w7/d1/2-create-react-app/intro-to-cra/

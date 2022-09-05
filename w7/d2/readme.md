@@ -2,7 +2,6 @@
 layout: default
 permalink: /:path/
 parent: 'Week 7: Intro to React'
-has_children: true
 nav_order: 2
 ---
 

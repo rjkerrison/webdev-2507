@@ -2,13 +2,24 @@
 layout: default
 permalink: /:path/
 parent: 'Week 7: Intro to React'
-has_children: true
 nav_order: 1
 ---
 
 # JSX, components, and props
 
 Today we'll cover JSX, components, and props.
+
+- [JSX, components, and props](#jsx-components-and-props)
+  - [Creating a react app](#creating-a-react-app)
+  - [JSX](#jsx)
+  - [Components](#components)
+    - [Import and export](#import-and-export)
+    - [Props](#props)
+  - [Tools](#tools)
+    - [Snippet extension](#snippet-extension)
+    - [React DevTools for Firefox and Chrome](#react-devtools-for-firefox-and-chrome)
+
+## Creating a react app
 
 To get started with react, we'll use the react starter.
 
@@ -92,7 +103,7 @@ const App = () => {
 }
 ```
 
-## Props
+### Props
 
 Just as functions have _parameters_ to make them more reusable,
 components have _props_.
@@ -143,7 +154,11 @@ const Button = (props) => {
 export default Button
 ```
 
-## Snippets
+## Tools
+
+React has some great tools to support us.
+
+### Snippet extension
 
 When defining components, we have a lot of repeated code structure.
 
@@ -152,7 +167,7 @@ We installed the [React Snippets extension][extension] which allows us to create
 - `rafce`: generates a React arrow function component and an export statement
 - `rfce`: same, but a function declaration instead of an arrow function
 
-## React DevTools
+### React DevTools for Firefox and Chrome
 
 The React team created the React DevTools, an extension for Firefox and Chrome which allows you to view your page as React components.
 

@@ -1,9 +1,8 @@
 ---
 layout: default
 permalink: /:path/
-title: 'Basic-auth'
+title: 'Basic auth'
 parent: 'Week 5: Advanced Backend'
-has_children: true
 nav_order: 2
 ---
 
