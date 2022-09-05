@@ -1,0 +1,43 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add React to a Website</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="./src/styles.css" />
+
+    <!-- Load Babel - used to parse JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- React's core library-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <!-- ReactDOM library renders the content created with React to the DOM. -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const Heading = (props) => {
+        return <h1>{props.text}</h1>
+      }
+
+      const App = () => (
+        <div>
+          <Heading text={'WebDev2507'} />
+          <p>React is a front-end JavaScript library </p>
+        </div>
+      )
+
+      ReactDOM.render(<App />, document.getElementById('root'))
+    </script>
+  </body>
+</html>
