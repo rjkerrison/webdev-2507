@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
 
     const section = sections[sectionIndex]
     section.scrollIntoView()
-    window.location.hash = section.id
+    window.history.replaceState(null, '', `#${section.id}`)
   }
 
   document.addEventListener('keydown', (event) => {
