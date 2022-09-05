@@ -12,3 +12,5 @@ Today, we'll see advanced state concepts, notably:
 
 - lifting state up
 - form state management
+
+First, a [standup](./standup.html).

@@ -39,7 +39,7 @@ h1 {
 
 ul {
   font-weight: normal;
-  font-size: 2rem;
+  font-size: calc(0.75rem + 3vw);
   font-family: 'Varela Round';
 }
 
