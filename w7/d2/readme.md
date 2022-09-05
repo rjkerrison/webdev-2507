@@ -7,6 +7,10 @@ nav_order: 2
 
 # React State
 
+First of all: [React recap time][recap].
+
+[recap]: ./cfu.html
+
 React only rerenders when necessary. Otherwise, everything is immutable: it never changes.
 
 To get React to rerender our functional components, we have to _hook into_ its _state management_ with… the **`useState` hook**.
