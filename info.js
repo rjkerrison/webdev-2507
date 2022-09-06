@@ -43,20 +43,18 @@ const chooseRandomStudent = (filter) => {
 }
 
 const getMorningSunshine = (date) => {
-  const today = new Date().setHours(0,0,0,0)
+  const today = new Date().setHours(0, 0, 0, 0)
 
   if (date) {
     const dateArray = date.split(`-`)
-    
-    if (dateArray.every(x => parseInt(x) !== NaN)) {
+
+    if (dateArray.every((x) => parseInt(x) !== NaN)) {
       dateArray.length === 1
-      ?
-      date = today + 86400000 * date
-      :
-      date = new Date(`${new Date().getFullYear()}-${date}`)
+        ? (date = today + 86400000 * date)
+        : (date = new Date(`${new Date().getFullYear()}-${date}`))
     }
   }
-  
+
   if (!date?.valueOf()) {
     date = today
   }
@@ -127,8 +125,13 @@ const viewStudentGithub = (student) => {
   runner.exec(`open ${url}`)
 }
 
-const viewStudentProject = (student) => {
-  const githubProject = `${student.github.username}/${student.projects[0]}`
+const viewStudentProject = (student, project = 1) => {
+  const githubProjectId = student.projects[project - 1]
+
+  const githubProject = githubProjectId.includes('/')
+    ? githubProjectId
+    : `${student.github.username}/${githubProjectId}`
+
   const url = githubUrl(githubProject)
   runner.exec(`open ${url}`)
 }
@@ -291,7 +294,7 @@ const execute = async () => {
       break
     case 'project':
       student = searchStudents(args.shift())
-      viewStudentProject(student)
+      viewStudentProject(student, parseInt(args.shift()))
       break
     case 'list':
       {
@@ -312,21 +315,20 @@ const execute = async () => {
         weekday: 'long',
       })
       student
-      ?
-      console.log(
-        `Next morning sunshine, on ${formatter.format(
-          student.morningSunshine.date
-        )}: ${student.fullname}!`
-      )
-      :
-      console.log(`No more morning sunshines :(`)
+        ? console.log(
+            `Next morning sunshine, on ${formatter.format(
+              student.morningSunshine.date
+            )}: ${student.fullname}!`
+          )
+        : console.log(`No more morning sunshines :(`)
       break
     case 'lab':
       {
         const students = getActiveStudents()
         const commands = students.map(
           (s) =>
-            `gh repo clone ${s.github?.username || '???'}/${args[0]
+            `gh repo clone ${s.github?.username || '???'}/${
+              args[0]
             } ${s.name.toLowerCase()}/${args[0]}`
         )
         commands.forEach((command) => console.log(command))
