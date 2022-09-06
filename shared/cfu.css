@@ -28,11 +28,11 @@ header {
 
 h1 {
   font-family: 'Varela Round';
-  font-size: 3rem;
+  font-size: calc(1rem + 2vw);
   padding: 0.25rem;
   margin: 0;
-  color: hsla(58, 84%, 63%, 0.75);
-  background-color: rgba(249, 132, 132, 0.75);
+  color: hsla(65, 97%, 66%, 0.95);
+  background-color: hsla(260, 81%, 53%, 0.75);
   mix-blend-mode: multiply;
   background-blend-mode: multiply;
 }
@@ -122,7 +122,7 @@ p.subtitle {
   font-size: calc(2rem + 2vw);
 }
 pre {
-  font-size: calc(1rem + 1vw);
+  font-size: min(calc(1rem + 1vw), calc(0.5rem + 1.5vw));
 }
 
 .flex-row {

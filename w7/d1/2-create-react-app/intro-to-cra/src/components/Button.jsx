@@ -1,9 +1,9 @@
 import './Button.css'
 
 const Button = (props) => {
-  const { text } = props
+  const { text, handleClick } = props
   return (
-    <button className="default-button" onClick={() => alert('CLICKED ME')}>
+    <button className="default-button" onClick={handleClick}>
       {text}
     </button>
   )

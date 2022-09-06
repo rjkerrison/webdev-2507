@@ -9,19 +9,15 @@ import ReactPlayer from 'react-player'
 
 import { TickerBoard as ReactTickerBoard } from 'react-ticker-board'
 
-import Button from './components/Button'
 import MyComponent from './components/MyComponent'
 import Footer from './components/Footer'
-import StudentCard from './components/StudentCard'
 import StudentList from './components/StudentList'
+import Counter from './components/Counter'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <picture>
-          <img src={paddingtonImage} alt="Paddington" />
-        </picture> */}
         <h1>Robin is the best!!!</h1>
         <a
           className="App-link"
@@ -37,28 +33,10 @@ function App() {
         size={20}
         messages={['Hello', 'I like Paddington']}
       />
-      <StudentList>
-        <StudentCard
-          name="Eva"
-          week={7}
-          info={{ city: 'BCN', course: 'WEB' }}
-        />
+      <Counter />
 
-        <StudentCard
-          name="Mat"
-          week={8}
-          info={{ city: 'MIA', course: 'DATA' }}
-        />
-        <StudentCard
-          name={'Marko'}
-          week={7}
-          info={{ city: 'PAR', course: 'WEB' }}
-        />
-      </StudentList>
+      <StudentList />
 
-      <Button text="I WAS CREATED BY A COMPONENT" />
-      <Button text="Hello" />
-      <Button text="Goodbye" />
       <MyComponent
         newProp={true}
         number={2}
@@ -76,6 +54,9 @@ function App() {
       <Footer name={'Robin James Kerrison'} />
 
       <ReactPlayer url="https://vimeo.com/channels/top/22439234" />
+      <picture>
+        <img src={paddingtonImage} alt="Paddington" />
+      </picture>
     </div>
   )
 }
