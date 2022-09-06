@@ -1,0 +1,13 @@
+.student-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem hsla(240, 70%, 20%, 0.5);
+}
+
+.student-list .cards {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
