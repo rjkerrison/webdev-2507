@@ -39,3 +39,12 @@
 .counter {
   font-size: 4rem;
 }
+
+picture img {
+  max-width: 100%;
+  height: auto;
+}
+
+picture {
+  width: 100%;
+}

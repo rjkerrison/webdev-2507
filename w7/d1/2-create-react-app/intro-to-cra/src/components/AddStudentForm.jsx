@@ -4,10 +4,17 @@ const AddStudentForm = ({ addNewStudent }) => {
   const [name, setName] = useState('')
   const [cohort, setCohort] = useState('')
 
+  const [error, setError] = useState(false)
+
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    addNewStudent({ name, cohort })
+    if (!name) {
+      setError(true)
+    } else {
+      setError(false)
+      addNewStudent({ name, cohort })
+    }
   }
 
   return (
@@ -20,6 +27,7 @@ const AddStudentForm = ({ addNewStudent }) => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+        {error && <p>Error! You must provide a name</p>}
       </div>
       <div>
         <label htmlFor="cohort">Cohort</label>

@@ -37,6 +37,12 @@ function App() {
 
       <StudentList />
 
+      {[
+        <p key={1}>Paragraph 1</p>,
+        <p key={2}>Paragraph 2</p>,
+        <p key={3}>Paragraph 3</p>,
+      ]}
+
       <MyComponent
         newProp={true}
         number={2}

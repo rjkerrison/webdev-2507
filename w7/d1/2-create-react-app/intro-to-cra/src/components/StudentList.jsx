@@ -1,6 +1,8 @@
 // ./src/components/StudentList.js
 
 import { useState } from 'react'
+import './StudentList.css'
+
 import AddStudentForm from './AddStudentForm'
 import StudentCard from './StudentCard'
 
@@ -12,32 +14,39 @@ function StudentList() {
     },
   ])
 
+  const addNewStudent = (student) => setStudents([...students, student])
+  const removeStudent = (name) => {
+    const allStudentsExceptCurrent = students.filter(
+      (student) => student.name !== name
+    )
+
+    setStudents(allStudentsExceptCurrent)
+  }
+
   return (
-    <div>
-      <AddStudentForm
-        addNewStudent={(student) => setStudents([...students, student])}
-      />
-
+    <section>
       <h2>Student List</h2>
-      {students.map((student) => {
-        return (
-          <StudentCard
-            name={student.name}
-            week={7}
-            info={{ city: 'PAR', course: student.cohort }}
-          />
-        )
-      })}
+      <div className="student-list">
+        <AddStudentForm addNewStudent={addNewStudent} />
 
-      <StudentCard name="Eva" week={7} info={{ city: 'BCN', course: 'WEB' }} />
-
-      <StudentCard name="Mat" week={8} info={{ city: 'MIA', course: 'DATA' }} />
-      <StudentCard
-        name={'Marko'}
-        week={7}
-        info={{ city: 'PAR', course: 'WEB' }}
-      />
-    </div>
+        <div className="cards">
+          {students.length === 0 ? (
+            <p>No students!</p>
+          ) : (
+            students.map((student) => {
+              return (
+                <StudentCard
+                  key={student.name}
+                  name={student.name}
+                  cohort={student.cohort}
+                  removeStudent={() => removeStudent(student.name)}
+                />
+              )
+            })
+          )}
+        </div>
+      </div>
+    </section>
   )
 }
 
