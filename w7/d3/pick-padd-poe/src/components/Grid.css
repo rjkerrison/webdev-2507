@@ -1,0 +1,6 @@
+.Grid {
+  display: grid;
+  width: 90vmin;
+  height: 90vmin;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}

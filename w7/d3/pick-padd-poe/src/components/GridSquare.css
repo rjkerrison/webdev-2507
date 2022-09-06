@@ -1,0 +1,13 @@
+.GridSquare {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid black;
+}
+
+.GridSquare.padd {
+  background-image: url(../images/padd.png);
+}
+.GridSquare.poe {
+  background-image: url(../images/poe.png);
+}
