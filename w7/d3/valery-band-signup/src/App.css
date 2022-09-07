@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-template: repeat(4, auto) / repeat(2, 1fr);
+  width: 50rem;
+}
+
+form div {
+  display: contents;
+}
