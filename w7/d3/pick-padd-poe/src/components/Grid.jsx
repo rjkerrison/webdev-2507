@@ -5,6 +5,7 @@ import GridSquare from './GridSquare'
 
 const Grid = ({ width = 3, height = 3 }) => {
   const [currentPlayer, setCurrentPlayer] = useState('padd')
+  const [winner, setWinner] = useState('')
   const [playerSquares, setPlayerSquares] = useState([
     '',
     '',
@@ -27,7 +28,7 @@ const Grid = ({ width = 3, height = 3 }) => {
       squares[0] === squares[1] &&
       squares[0] === squares[2]
     ) {
-      alert(`player ${squares[0]} has won`)
+      setWinner(squares[0])
     }
   }
 
@@ -37,10 +38,15 @@ const Grid = ({ width = 3, height = 3 }) => {
       const index = i * width + j
 
       const setPlayer = () => {
+        if (winner) {
+          // somebody already won
+          return
+        }
+
         const newPlayerSquares = [...playerSquares]
         newPlayerSquares[index] = currentPlayer
         setPlayerSquares(newPlayerSquares)
-        checkForWinner(playerSquares)
+        checkForWinner(newPlayerSquares)
       }
 
       cells.push(
@@ -57,7 +63,13 @@ const Grid = ({ width = 3, height = 3 }) => {
 
   console.log(cells)
 
-  return <div className="Grid">{cells}</div>
+  return (
+    <>
+      <h2>Current player: {currentPlayer}</h2>
+      {winner && <p>{winner.toUpperCase()} has won!</p>}
+      <div className="Grid">{cells}</div>
+    </>
+  )
 }
 
 export default Grid
