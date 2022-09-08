@@ -14,6 +14,9 @@ const Counter = () => {
   console.log('current counter', counter)
   // const [value, setValue] = useState(initialValue)
 
+  // this would cause an infinite rerender
+  // setCounter(counter + 1)
+
   return (
     <>
       <Button

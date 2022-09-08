@@ -13,8 +13,12 @@ import MyComponent from './components/MyComponent'
 import Footer from './components/Footer'
 import StudentList from './components/StudentList'
 import Counter from './components/Counter'
+import Timer from './components/Timer'
+import { useState } from 'react'
 
 function App() {
+  const [showTimer, setShowTimer] = useState(false)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -33,6 +37,8 @@ function App() {
         size={20}
         messages={['Hello', 'I like Paddington']}
       />
+      <button onClick={() => setShowTimer(!showTimer)}>Toggle timer</button>
+      {showTimer && <Timer />}
       <Counter />
 
       <StudentList />
