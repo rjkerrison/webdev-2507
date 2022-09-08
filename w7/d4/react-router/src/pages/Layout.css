@@ -1,0 +1,19 @@
+header {
+  background: black;
+  color: white;
+}
+
+header a {
+  color: yellow;
+}
+header a:visited {
+  color: rgb(214, 214, 53);
+}
+
+main {
+  border: 5px solid rebeccapurple;
+}
+
+footer {
+  background-color: blanchedalmond;
+}
