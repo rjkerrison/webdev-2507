@@ -4,7 +4,7 @@ const MarsRover = require('./MarsRover.model')
 const MarsRoverCamera = require('./MarsRoverCamera.model')
 
 const marsRoverPhotoSchema = new Schema({
-  nasa_id: {
+  nasaId: {
     type: Schema.Types.Number,
   },
   sol: {
