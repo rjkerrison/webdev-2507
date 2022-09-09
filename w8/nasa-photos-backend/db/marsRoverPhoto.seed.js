@@ -2,7 +2,7 @@ const { default: mongoose } = require('mongoose')
 const MarsRover = require('../models/MarsRover.model')
 const MarsRoverCamera = require('../models/MarsRoverCamera.model')
 const MarsRoverPhoto = require('../models/MarsRoverPhoto.model')
-const photos = require('./marsRoverPhoto.json')
+const { photos } = require('./marsRoverPhoto.json')
 
 const getMongooseId = async (model, { id, ...object }) => {
   const found = await model.findOne({ nasaId: id })
