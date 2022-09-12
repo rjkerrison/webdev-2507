@@ -1,0 +1,31 @@
+.add-review {
+  padding: 1rem;
+}
+
+h2 {
+  margin: 0;
+}
+
+.add-review .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+input[type='submit'],
+input[type='button'] {
+  border: none;
+  transition: all 1s ease-in-out;
+}
+
+.closed input[type='submit'],
+.closed input[type='button'] {
+  height: 0;
+  padding: 0 0.5rem;
+}
+
+.open input[type='submit'],
+.open input[type='button'] {
+  height: 2rem;
+  padding: 0.5rem;
+}

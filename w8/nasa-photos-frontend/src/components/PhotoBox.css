@@ -1,0 +1,10 @@
+.photo-box .heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem;
+}
+
+.photo-box .heading p {
+  padding: 0;
+  margin: 0;
+}

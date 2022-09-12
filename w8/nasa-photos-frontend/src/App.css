@@ -1,13 +1,10 @@
-/* Inline #2 | http://localhost:3001/ */
-
-.heading {
-  display: flex;
-  justify-content: space-between;
+* {
+  box-sizing: border-box;
 }
 
 main {
-  padding: 1rem;
   max-width: 30rem;
+  background: white;
 }
 
 .App-header {
@@ -30,10 +27,23 @@ picture > img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: gray;
 }
 
 textarea {
   resize: none;
+  transition: all 1s ease-in-out;
+  border: none;
+}
+
+textarea.closed {
+  height: 0;
+  padding: 0;
+}
+
+textarea.open {
+  height: 2rem;
+  padding: 2px;
 }
 
 label {
@@ -46,12 +56,15 @@ textarea {
   display: block;
 }
 
-.add-review {
-  border-radius: 1rem;
-  border: 1px solid black;
-  padding: 1rem;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-h2 {
-  margin: 0;
+.principal {
+  background-color: hsl(240, 75%, 76%);
+}
+.cancel {
+  background-color: hsl(0, 0%, 80%);
 }

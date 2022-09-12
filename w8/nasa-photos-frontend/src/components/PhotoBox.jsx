@@ -1,19 +1,19 @@
-import { formatAs } from '../utils/formatDate'
+import './PhotoBox.css'
+
 import Reviews from './Reviews'
+import Caption from './Caption'
 
 const PhotoBox = ({ date, camera, rover, url, _id }) => {
   return (
-    <article>
+    <article className="photo-box">
       <div className="heading">
-        <p>
-          {formatAs.date(date)} {formatAs.time(date)}
-        </p>
-        <p>{camera.name}</p>
+        <p title={camera.full_name}>{camera.name}</p>
         <p>{rover.name}</p>
       </div>
       <picture>
         <img src={url} alt="shiny wheels" />
       </picture>
+      <Caption rover={rover} date={date} />
       <Reviews photoId={_id} />
     </article>
   )

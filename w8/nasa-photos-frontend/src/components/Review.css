@@ -1,0 +1,22 @@
+.review {
+  display: grid;
+  grid-template: '. rating' 1rem 'username content' auto / 5rem 1fr;
+  border-bottom: 1px solid #cccccc;
+}
+
+.author {
+  grid-area: author;
+}
+
+.rating {
+  grid-area: rating;
+}
+
+.content {
+  grid-area: content;
+  margin: 0;
+}
+
+.star {
+  color: hsl(216, 68%, 69%);
+}

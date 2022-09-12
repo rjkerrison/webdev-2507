@@ -1,10 +1,20 @@
+import './AddReview.css'
+
 import axios from 'axios'
 import React, { useState } from 'react'
 import ReactStars from 'react-rating-stars-component'
 
 const AddReview = ({ photoId, updateReviewsList }) => {
   const [text, setText] = useState('')
-  const [rating, setRating] = useState(5)
+  const [rating, setRating] = useState(0)
+
+  const [isContentFieldOpen, setIsContentFieldOpen] = useState(false)
+
+  const resetForm = () => {
+    setRating(0)
+    setText('')
+    setIsContentFieldOpen(false)
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -27,6 +37,7 @@ const AddReview = ({ photoId, updateReviewsList }) => {
       .then((response) => {
         console.log('response status', response.status)
         updateReviewsList()
+        resetForm()
       })
       .catch((error) => {
         console.log(error)
@@ -36,24 +47,41 @@ const AddReview = ({ photoId, updateReviewsList }) => {
   return (
     <div className="add-review">
       <h2>Add your review</h2>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        className={isContentFieldOpen ? 'open' : 'closed'}
+      >
         <label htmlFor="rating">Rating</label>
         <ReactStars
           count={5}
-          onChange={(value) => setRating(value)}
+          value={rating}
+          onChange={(value) => {
+            setIsContentFieldOpen(true)
+            setRating(value)
+          }}
           size={24}
           activeColor="#00d7ff"
         />
         <label htmlFor="content">Content</label>
         <textarea
+          className={isContentFieldOpen ? 'open' : 'closed'}
           name="content"
           id="content"
           cols="30"
-          rows="2"
+          rows="1"
+          placeholder="What did you think?"
           onChange={(event) => setText(event.target.value)}
           value={text}
         ></textarea>
-        <input type="submit" value="Send" />
+        <div className="buttons">
+          <input
+            type="button"
+            value="Cancel"
+            className="cancel"
+            onClick={resetForm}
+          />
+          <input type="submit" className="principal" value="Send" />
+        </div>
       </form>
     </div>
   )
