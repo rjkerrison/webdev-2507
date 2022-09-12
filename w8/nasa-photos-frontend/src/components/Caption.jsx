@@ -6,7 +6,7 @@ import captions from './captions.json'
 
 const { messages } = captions
 
-const Caption = ({ date }) => {
+const Caption = ({ date, sol }) => {
   const message = useMemo(
     () => messages[Math.floor(Math.random() * messages.length)],
     []
@@ -15,7 +15,7 @@ const Caption = ({ date }) => {
   return (
     <div className="caption">
       <p>
-        {formatAs.date(date)} {formatAs.time(date)}
+        {formatAs.date(date)} {formatAs.time(date)} (Sol {sol})
       </p>
       <p>{message}</p>
     </div>

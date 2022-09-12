@@ -31,7 +31,7 @@ router.get('/:name/photos', async (req, res, next) => {
       return
     }
 
-    const photos = await MarsRoverPhoto.find({ camera: camera.id })
+    const photos = await MarsRoverPhoto.find({ camera: camera.id }).sort('-sol')
     res.json({ photos, camera })
   } catch (error) {
     next(error)

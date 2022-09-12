@@ -4,6 +4,7 @@ const MarsRoverCamera = require('../models/MarsRoverCamera.model')
 const MarsRoverPhoto = require('../models/MarsRoverPhoto.model')
 const Review = require('../models/Review.model')
 const { photos } = require('./marsRoverPhoto.json')
+const { getRecentPhotos } = require('./readManifests')
 
 const getMongooseId = async (model, { id, ...object }) => {
   const found = await model.findOne({ nasaId: id })
@@ -62,14 +63,7 @@ const getNasaIdDbMapping = async (model, objects) => {
   )
 }
 
-;(async () => {
-  await require('./')
-
-  await Review.deleteMany()
-  await MarsRover.deleteMany()
-  await MarsRoverCamera.deleteMany()
-  await MarsRoverPhoto.deleteMany()
-
+const createPhotosInDatabase = async (photos) => {
   const rovers = photos.reduce(getReducer('rover'), {})
   const cameras = photos.reduce(getReducer('camera'), {})
 
@@ -84,12 +78,30 @@ const getNasaIdDbMapping = async (model, objects) => {
     photos.map((photo) => convertToMarsRoverPhoto(photo, dbRovers, dbCameras))
   )
   const result = await MarsRoverPhoto.create(marsRoverPhotos)
-
   console.log(`Created ${result.length} photos.`)
+}
+
+;(async () => {
+  await require('./')
+
+  await Review.deleteMany()
+  await MarsRover.deleteMany()
+  await MarsRoverCamera.deleteMany()
+  await MarsRoverPhoto.deleteMany()
+
+  createPhotosInDatabase(photos)
+
+  for (const rover of ['curiosity', 'opportunity', 'spirit']) {
+    for await (const photos of getRecentPhotos(rover)) {
+      await createPhotosInDatabase(photos)
+    }
+  }
+
   console.log(`There are now ${await MarsRover.countDocuments()} rovers.`)
   console.log(
     `There are now ${await MarsRoverCamera.countDocuments()} cameras.`
   )
+  console.log(`There are now ${await MarsRoverPhoto.countDocuments()} photos.`)
 
   await mongoose.connection.close()
   return

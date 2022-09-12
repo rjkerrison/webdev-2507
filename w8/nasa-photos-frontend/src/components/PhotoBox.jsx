@@ -3,7 +3,7 @@ import './PhotoBox.css'
 import Reviews from './Reviews'
 import Caption from './Caption'
 
-const PhotoBox = ({ date, camera, rover, url, _id }) => {
+const PhotoBox = ({ sol, date, camera, rover, url, _id }) => {
   return (
     <article className="photo-box">
       <div className="heading">
@@ -13,7 +13,7 @@ const PhotoBox = ({ date, camera, rover, url, _id }) => {
       <picture>
         <img src={url} alt="shiny wheels" />
       </picture>
-      <Caption rover={rover} date={date} />
+      <Caption rover={rover} date={date} sol={sol} />
       <Reviews photoId={_id} />
     </article>
   )

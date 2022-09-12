@@ -7,7 +7,10 @@ const Review = require('../models/Review.model')
 const router = express.Router()
 
 router.get('/', async (req, res, next) => {
-  const photos = await MarsRoverPhoto.find().limit(10).populate('camera rover')
+  const photos = await MarsRoverPhoto.find()
+    .sort('-sol')
+    .limit(10)
+    .populate('camera rover')
   res.json({ photos })
 })
 
