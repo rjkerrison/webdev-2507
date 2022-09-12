@@ -1,3 +1,5 @@
+import './Reviews.css'
+
 import axios from 'axios'
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import AddReview from './AddReview'
@@ -45,8 +47,11 @@ const Reviews = ({ photoId }) => {
   }, [updateReviewsList])
 
   return (
-    <>
-      <p>Average rating: {averageRating}</p>
+    <div className="reviews">
+      {/* When averageRating is NaN, we don't show this paragraph */}
+      {!!averageRating && (
+        <p className="average">Average rating: {averageRating.toFixed(2)}</p>
+      )}
       <ul>
         {allReviews.map((review) => {
           console.log(review)
@@ -59,7 +64,7 @@ const Reviews = ({ photoId }) => {
         })}
       </ul>
       <AddReview photoId={photoId} updateReviewsList={updateReviewsList} />
-    </>
+    </div>
   )
 }
 
