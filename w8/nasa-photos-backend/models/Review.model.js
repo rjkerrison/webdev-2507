@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose')
+const { Schema, model } = require('mongoose')
 const Photo = require('./Photo.model')
 const User = require('./User.model')
 
