@@ -7,8 +7,8 @@ const PhotoBox = ({ date, camera, rover, url, _id }) => {
   return (
     <article className="photo-box">
       <div className="heading">
-        <p title={camera.full_name}>{camera.name}</p>
-        <p>{rover.name}</p>
+        <p title={camera.full_name}>📸 {camera.name}</p>
+        <p>{rover.name} 🤖</p>
       </div>
       <picture>
         <img src={url} alt="shiny wheels" />
