@@ -3,7 +3,7 @@
 }
 
 main {
-  max-width: 30rem;
+  max-width: 40rem;
   background: white;
 }
 
@@ -19,6 +19,8 @@ picture {
 }
 
 picture > img {
+  display: block;
+  margin: 0 auto;
   max-width: 100%;
   height: auto;
 }
@@ -28,6 +30,10 @@ picture > img {
   flex-direction: column;
   align-items: center;
   background: gray;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
 }
 
 textarea {
