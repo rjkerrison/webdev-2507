@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import ReactStars from 'react-rating-stars-component'
 
 const AddReview = ({ photoId, updateReviewsList }) => {
   const [text, setText] = useState('')
@@ -33,17 +34,28 @@ const AddReview = ({ photoId, updateReviewsList }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <textarea
-        name=""
-        id=""
-        cols="30"
-        rows="2"
-        onChange={(event) => setText(event.target.value)}
-        value={text}
-      ></textarea>
-      <input type="submit" value="Send" />
-    </form>
+    <div className="add-review">
+      <h2>Add your review</h2>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="rating">Rating</label>
+        <ReactStars
+          count={5}
+          onChange={(value) => setRating(value)}
+          size={24}
+          activeColor="#00d7ff"
+        />
+        <label htmlFor="content">Content</label>
+        <textarea
+          name="content"
+          id="content"
+          cols="30"
+          rows="2"
+          onChange={(event) => setText(event.target.value)}
+          value={text}
+        ></textarea>
+        <input type="submit" value="Send" />
+      </form>
+    </div>
   )
 }
 

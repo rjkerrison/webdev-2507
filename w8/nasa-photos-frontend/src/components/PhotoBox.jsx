@@ -1,5 +1,4 @@
 import { formatAs } from '../utils/formatDate'
-import AddReview from './AddReview'
 import Reviews from './Reviews'
 
 const PhotoBox = ({ date, camera, rover, url, _id }) => {
