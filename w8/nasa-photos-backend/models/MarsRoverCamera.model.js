@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose')
+const MarsRover = require('./MarsRover.model')
 
 const marsRoverCameraSchema = new Schema({
   nasaId: {
@@ -7,8 +8,9 @@ const marsRoverCameraSchema = new Schema({
   name: {
     type: Schema.Types.String,
   },
-  rover_id: {
-    type: Schema.Types.Number,
+  rover: {
+    type: Schema.Types.ObjectId,
+    ref: MarsRover,
   },
   full_name: {
     type: Schema.Types.String,

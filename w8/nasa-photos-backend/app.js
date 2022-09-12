@@ -6,6 +6,7 @@ require('./db')
 
 app.use('/', require('./routes/index'))
 app.use('/photos', require('./routes/photo.routes'))
+app.use('/cameras', require('./routes/camera.routes'))
 app.use('/auth', require('./routes/auth.routes'))
 
 require('./error-handling')(app)

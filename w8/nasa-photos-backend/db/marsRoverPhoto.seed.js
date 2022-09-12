@@ -2,6 +2,7 @@ const { default: mongoose } = require('mongoose')
 const MarsRover = require('../models/MarsRover.model')
 const MarsRoverCamera = require('../models/MarsRoverCamera.model')
 const MarsRoverPhoto = require('../models/MarsRoverPhoto.model')
+const Review = require('../models/Review.model')
 const { photos } = require('./marsRoverPhoto.json')
 
 const getMongooseId = async (model, { id, ...object }) => {
@@ -9,7 +10,18 @@ const getMongooseId = async (model, { id, ...object }) => {
   if (found) {
     return found._id
   } else {
-    const created = await model.create(object)
+    let { rover } = object
+    if (rover && Number.isInteger(parseInt(rover))) {
+      console.log('ROVER TIME', rover)
+      // id is a nasaId
+      const found = await MarsRover.findOne({ nasaId: rover })
+      if (found) {
+        console.log('FOUND HIM!', found)
+        rover = found._id
+      }
+    }
+
+    const created = await model.create({ ...object, nasaId: id, rover })
     return created._id
   }
 }
@@ -31,7 +43,9 @@ const convertToMarsRoverPhoto = async (
 const getReducer = (key) => {
   return (mapping, photo) => {
     if (!mapping[photo[key].id]) {
-      mapping[photo[key].id] = photo[key]
+      // A little conversion
+      const { rover_id: rover, ...values } = photo[key]
+      mapping[photo[key].id] = { ...values, rover }
     }
     return mapping
   }
@@ -51,6 +65,7 @@ const getNasaIdDbMapping = async (model, objects) => {
 ;(async () => {
   await require('./')
 
+  await Review.deleteMany()
   await MarsRover.deleteMany()
   await MarsRoverCamera.deleteMany()
   await MarsRoverPhoto.deleteMany()
