@@ -1,13 +1,16 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Loading from '../components/Loading'
 import PhotoBox from '../components/PhotoBox'
+import { ThemeContext } from '../contexts/ThemeContext'
 
 const HomeFeed = () => {
+  const { theme } = useContext(ThemeContext)
+
   const [allPhotos, setAllPhotos] = useState([])
   const [scrollPage, setScrollPage] = useState(1)
   const [loadedPages, setLoadedPages] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     document.title = `MarsRover | ${allPhotos.length} recent photos`
@@ -62,7 +65,7 @@ const HomeFeed = () => {
   return (
     <>
       {isLoading ? <Loading /> : null}
-      <main className="scrollable" onScroll={handleScroll}>
+      <main className={`scrollable ${theme}`} onScroll={handleScroll}>
         {allPhotos.map((photo) => {
           return (
             <PhotoBox

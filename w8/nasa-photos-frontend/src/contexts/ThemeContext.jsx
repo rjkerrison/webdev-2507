@@ -1,12 +1,12 @@
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 
 const ThemeContext = createContext()
 
 const ThemeContextWrapper = ({ children }) => {
-  const theme = 'light'
+  const [theme, setTheme] = useState('light')
 
   return (
-    <ThemeContext.Provider value={{ theme, author: 'Robin' }}>
+    <ThemeContext.Provider value={{ theme, author: 'Robin', setTheme }}>
       {children}
     </ThemeContext.Provider>
   )

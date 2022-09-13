@@ -1,10 +1,13 @@
 import './AddReview.css'
 
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import ReactStars from 'react-rating-stars-component'
+import { AuthContext } from '../contexts/AuthContext'
 
 const AddReview = ({ photoId, updateReviewsList }) => {
+  const { token } = useContext(AuthContext)
+
   const [text, setText] = useState('')
   const [rating, setRating] = useState(0)
 
@@ -19,6 +22,11 @@ const AddReview = ({ photoId, updateReviewsList }) => {
   const handleSubmit = (event) => {
     event.preventDefault()
 
+    if (!token) {
+      alert('YOU ARE NOT LOGGED IN')
+      return
+    }
+
     const data = {
       content: text,
       rating: rating,
@@ -28,6 +36,7 @@ const AddReview = ({ photoId, updateReviewsList }) => {
       method: 'post',
       url: `http://localhost:3000/photos/${photoId}/reviews`,
       headers: {
+        Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
       data: data,

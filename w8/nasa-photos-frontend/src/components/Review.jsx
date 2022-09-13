@@ -3,10 +3,10 @@ import ReactStars from 'react-rating-stars-component'
 
 import './Review.css'
 
-const Review = ({ content, rating, username }) => {
+const Review = ({ content, rating, user }) => {
   return (
     <div className="review">
-      <p className="author">{username}</p>
+      <p className="author">{user?.username}</p>
       <div className="rating">
         <ReactStars
           count={5}

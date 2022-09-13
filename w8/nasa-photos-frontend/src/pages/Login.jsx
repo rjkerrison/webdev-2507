@@ -1,7 +1,14 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '../contexts/AuthContext'
+import { ThemeContext } from '../contexts/ThemeContext'
 
 const Login = () => {
+  const { theme } = useContext(ThemeContext)
+  const { setToken } = useContext(AuthContext)
+  const navigate = useNavigate()
+
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -23,7 +30,9 @@ const Login = () => {
 
     axios(config)
       .then((response) => {
-        console.log(response.data)
+        const jwt = response.data.token
+        setToken(jwt)
+        navigate('/')
       })
       .catch((error) => {
         console.log(error)
@@ -31,7 +40,7 @@ const Login = () => {
   }
 
   return (
-    <main>
+    <main className={theme}>
       <h2>LOGIN TO THE BEST WEBSITE EVER</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username</label>

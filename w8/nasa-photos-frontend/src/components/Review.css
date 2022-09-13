@@ -1,7 +1,12 @@
 .review {
   display: grid;
-  grid-template: '. rating' 1rem 'username content' auto / 5rem 1fr;
+  grid-template: 'rating rating' 1rem 'author content' auto / auto 1fr;
   border-bottom: 1px solid #cccccc;
+  gap: 0.25rem;
+  padding: 0.25rem;
+}
+.review p {
+  margin: 0;
 }
 
 .author {

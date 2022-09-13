@@ -5,6 +5,12 @@
 main {
   max-width: 40rem;
   background: white;
+  min-height: 100vh;
+}
+
+main.dark {
+  background: black;
+  color: white;
 }
 
 .App-header {

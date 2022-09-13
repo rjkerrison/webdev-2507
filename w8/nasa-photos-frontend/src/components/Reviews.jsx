@@ -1,9 +1,16 @@
 import './Reviews.css'
 
 import axios from 'axios'
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react'
 import AddReview from './AddReview'
 import Review from './Review'
+import { AuthContext } from '../contexts/AuthContext'
 
 const getAverageRating = (reviews) => {
   const totalRating = reviews.reduce(
@@ -15,6 +22,7 @@ const getAverageRating = (reviews) => {
 
 const Reviews = ({ photoId }) => {
   const [allReviews, setAllReviews] = useState([])
+  const { isLoggedIn } = useContext(AuthContext)
 
   const averageRating = useMemo(
     () => getAverageRating(allReviews),
@@ -63,7 +71,9 @@ const Reviews = ({ photoId }) => {
           )
         })}
       </ul>
-      <AddReview photoId={photoId} updateReviewsList={updateReviewsList} />
+      {isLoggedIn && (
+        <AddReview photoId={photoId} updateReviewsList={updateReviewsList} />
+      )}
     </div>
   )
 }
