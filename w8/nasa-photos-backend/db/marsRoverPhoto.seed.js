@@ -91,7 +91,7 @@ const createPhotosInDatabase = async (photos) => {
 
   createPhotosInDatabase(photos)
 
-  for (const rover of ['curiosity', 'opportunity', 'spirit']) {
+  for (const rover of ['perseverance', 'curiosity', 'opportunity', 'spirit']) {
     for await (const photos of getRecentPhotos(rover)) {
       await createPhotosInDatabase(photos)
     }

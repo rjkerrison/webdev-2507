@@ -8,10 +8,22 @@ main {
 }
 
 .App-header {
-  background: black;
+  background: hsl(17, 82%, 9%);
   color: white;
   text-align: center;
   width: 100%;
+  position: fixed;
+  height: 2.5rem;
+  top: 0;
+  z-index: 1;
+}
+
+.App-header h1 {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 picture {
@@ -29,11 +41,13 @@ picture > img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: gray;
+  background: hsl(27, 15%, 43%);
   position: fixed;
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
+  padding-top: 2.5rem;
+  padding-bottom: 50vh;
 }
 
 textarea {

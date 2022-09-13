@@ -15,10 +15,10 @@ const Caption = ({ date, sol, rover }) => {
   return (
     <div className="caption">
       <p className="date">
-        {formatAs.date(date)} {formatAs.time(date)} (Sol {sol})
+        {formatAs.date(date)} (Sol {sol})
       </p>
       <p>
-        <b>{rover.name.toLowerCase()}</b> {message}
+        <span className="author">{rover.name.toLowerCase()}</span> {message}
       </p>
     </div>
   )

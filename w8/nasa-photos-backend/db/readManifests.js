@@ -40,7 +40,7 @@ const getRecentPhotos = async function* (roverName) {
     return
   }
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 5; i++) {
     const { earth_date } = days.pop()
 
     const config = {

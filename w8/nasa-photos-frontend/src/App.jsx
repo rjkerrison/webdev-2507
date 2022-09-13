@@ -1,17 +1,25 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
+import Loading from './components/Loading'
 import PhotoBox from './components/PhotoBox'
 
 function App() {
   const [allPhotos, setAllPhotos] = useState([])
   const [scrollPage, setScrollPage] = useState(1)
   const [loadedPages, setLoadedPages] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
+
+  useEffect(() => {
+    document.title = `MarsRover | ${allPhotos.length} recent photos`
+  }, [allPhotos])
 
   useEffect(() => {
     if (loadedPages.includes(scrollPage)) {
       return
     }
+
+    setIsLoading(true)
 
     let config = {
       method: 'get',
@@ -29,6 +37,7 @@ function App() {
         const { photos } = response.data
         setAllPhotos((current) => [...current, ...photos])
         setLoadedPages((current) => [...current, scrollPage])
+        setTimeout(() => setIsLoading(false), 500)
       })
       .catch((error) => {
         console.log(error)
@@ -46,7 +55,7 @@ function App() {
       message: 'scroll',
     })
 
-    if (remainingScrolls < 0.5) {
+    if (remainingScrolls < 0.1) {
       setScrollPage(loadedPages.at(-1) + 1)
     }
   }
@@ -54,8 +63,9 @@ function App() {
   return (
     <div className="App" onScroll={handleScroll}>
       <header className="App-header">
-        <h1>InstaMarsRoverGram</h1>
+        <h1>InstaMarsRoverGram: {allPhotos.length} photos</h1>
       </header>
+      {isLoading ? <Loading /> : null}
       <main>
         {allPhotos.map((photo) => {
           return (
