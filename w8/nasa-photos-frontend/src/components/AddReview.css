@@ -2,14 +2,19 @@
   padding: 1rem;
 }
 
-h2 {
+.add-review h2 {
   margin: 0;
+  font-size: 1.125rem;
 }
 
 .add-review .buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+.add-review textarea {
+  width: 100%;
 }
 
 input[type='submit'],

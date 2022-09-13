@@ -46,7 +46,7 @@ const AddReview = ({ photoId, updateReviewsList }) => {
 
   return (
     <div className="add-review">
-      <h2>Add your review</h2>
+      <h2>Your review</h2>
       <form
         onSubmit={handleSubmit}
         className={isContentFieldOpen ? 'open' : 'closed'}

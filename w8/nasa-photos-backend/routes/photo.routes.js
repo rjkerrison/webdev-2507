@@ -10,7 +10,7 @@ router.get('/', async (req, res, next) => {
   const { page = 1 } = req.query
 
   const photos = await MarsRoverPhoto.find()
-    .sort('-sol')
+    .sort('-earth_date')
     .skip((page - 1) * 10)
     .limit(10)
     .populate('camera rover')
