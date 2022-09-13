@@ -11,7 +11,11 @@ const userSchema = new Schema(
       type: Schema.Types.String,
       required: true,
     },
-    password: { type: Schema.Types.String, required: true, select: false },
+    password: {
+      type: Schema.Types.String,
+      required: true,
+      select: false,
+    },
     role: {
       type: [Schema.Types.String],
       enum: ['admin', 'user'],

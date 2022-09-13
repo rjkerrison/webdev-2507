@@ -43,7 +43,7 @@ router.post('/login', async (req, res, next) => {
       .json({ message: 'Please provide username and password' })
   }
   try {
-    const foundUser = await User.findOne({ username })
+    const foundUser = await User.findOne({ username }).select('password')
     if (!foundUser) {
       return res.status(400).json({ message: 'wrong credentials' })
     }
@@ -59,7 +59,7 @@ router.post('/login', async (req, res, next) => {
       expiresIn: '1h',
     })
 
-    res.status(200).json(token)
+    res.status(200).json({ token })
   } catch (error) {
     next(error)
   }

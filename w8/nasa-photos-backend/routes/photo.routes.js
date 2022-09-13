@@ -29,15 +29,19 @@ router.get('/:id/reviews', async (req, res, next) => {
       return
     }
 
-    const reviews = await Review.find({ photo: req.params.id })
+    const reviews = await Review.find({ photo: req.params.id }).populate('user')
     res.json({ reviews })
   } catch (error) {
     next(error)
   }
 })
 
-router.post('/:id/reviews', async (req, res, next) => {
-  const review = await Review.create({ photo: req.params.id, ...req.body })
+router.post('/:id/reviews', isAuthenticated, async (req, res, next) => {
+  const review = await Review.create({
+    photo: req.params.id,
+    user: req.user,
+    ...req.body,
+  })
   res.json(review)
 })
 

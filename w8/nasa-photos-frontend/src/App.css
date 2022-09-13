@@ -38,15 +38,20 @@ picture > img {
 }
 
 .App {
+  padding-top: 2.5rem;
+  background: hsl(27, 15%, 43%);
+
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: hsl(27, 15%, 43%);
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
+}
+
+main.scrollable {
   overflow-y: scroll;
-  padding-top: 2.5rem;
   padding-bottom: 50vh;
 }
 
