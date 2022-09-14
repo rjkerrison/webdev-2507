@@ -7,3 +7,6 @@ exclude:
   - w7/d3/valery-band-signup/
   - w7/d4/react-router/
   - w7/d5/react-connecting-to-backend/
+  - w8/nasa-photos-frontend/
+  - w8/nasa-photos-backend/
+  - w8/ironnutrition-example-solution/
