@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React deployment guide</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- integrity="sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z6nvW1dqK0SKXLbn9h4KwZTNtAyw==" -->
+    <link rel="stylesheet" href="../../shared/cfu.css" />
+    <!-- Load Babel - used to parse JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- React's core library-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- ReactDOM library renders the content created with React to the DOM. -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"
+      integrity="sha512-BNc7saQYlxCL10lykUYhFBcnzdKMnjx5fp5s5wPucDyZ7rKNwCoqJh1GwEAIhuePEK4WM9askJBRsu7ma0Rzvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../../shared/cfu.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        console.log('Loaded', hljs)
+        hljs.highlightAll()
+      })
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const Picture = ({ filename }) => {
+        return (
+          <>
+            <div className="picture-container">
+              <picture>
+                <img src={`./images/${filename}`} alt={filename} />
+              </picture>
+            </div>
+          </>
+        )
+      }
+
+      const questions = [
+        <>
+          <h2 className="paddington">Final Day Presentation</h2>
+          <p>One last thing…</p>
+        </>,
+        <>
+          <h2>No recap questions!</h2>
+          <p>Well done on learning…</p>
+        </>,
+        <h2>JS objects</h2>,
+        <h2>JS array methods</h2>,
+        <h2>the DOM</h2>,
+        <h2>Flexbox</h2>,
+        <h2>la bagarre (a way of life)</h2>,
+        <h2>Mongo</h2>,
+        <h2>express</h2>,
+        <h2>mongoose</h2>,
+        <>
+          <h2>req, res, next, middlewares</h2>
+          <p>all that stuff</p>
+        </>,
+        <h2>HTTP methods</h2>,
+        <>
+          <h2>HTTP cats</h2>
+          <picture>
+            <img src="https://http.cat/301" alt="301 cat" />
+          </picture>
+        </>,
+        <h2>React basics</h2>,
+        <>
+          <h2>
+            <code>useEffect</code>
+          </h2>
+          <p>everyone's favourite hook</p>
+        </>,
+        <h2>a little bit about UX</h2>,
+        <h2>React router</h2>,
+        <>
+          <h2>how to throw a Paddington</h2>
+          <picture>
+            <img src="./padd.png" alt="paddington" />
+          </picture>
+        </>,
+        <h2>how to work together</h2>,
+        <h2>axios/ajax</h2>,
+        <h2>JSON</h2>,
+        <h2>to spread out all over the building so we couldn't find you</h2>,
+        <h2>git and Github</h2>,
+        <h2>probably lots of British expressions?</h2>,
+        <>
+          <h2>You're all amazing</h2>
+          <p>
+            9 weeks ago you couldn't do any of <code>this</code>
+          </p>
+        </>,
+        <>
+          <h2 className="paddington">Thank you!</h2>
+          <p>The end.</p>
+        </>,
+      ]
+
+      const QuestionSection = ({ element }) => <section>{element}</section>
+
+      ReactDOM.render(
+        <>
+          <header>
+            <h1>Final Day Presentation</h1>
+          </header>
+          <main>
+            {questions.map((q, i) => (
+              <QuestionSection element={q} key={i} />
+            ))}
+          </main>
+        </>,
+        document.getElementById('root'),
+        () => hljs.highlightAll()
+      )
+    </script>
+  </body>
+</html>

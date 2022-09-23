@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cohort Awards</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- integrity="sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z6nvW1dqK0SKXLbn9h4KwZTNtAyw==" -->
+    <link rel="stylesheet" href="../shared/cfu.css" />
+    <!-- Load Babel - used to parse JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- React's core library-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- ReactDOM library renders the content created with React to the DOM. -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"
+      integrity="sha512-BNc7saQYlxCL10lykUYhFBcnzdKMnjx5fp5s5wPucDyZ7rKNwCoqJh1GwEAIhuePEK4WM9askJBRsu7ma0Rzvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../shared/cfu.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        console.log('Loaded', hljs)
+        hljs.highlightAll()
+      })
+    </script>
+    <style>
+      h1.paddington {
+        font-size: calc(4rem + 5vw);
+        padding: 0.25rem;
+        margin: 0;
+        color: hsla(65, 97%, 66%, 0.95);
+        background: transparent;
+        mix-blend-mode: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const Picture = ({ filename }) => {
+        return (
+          <>
+            <div className="picture-container">
+              <picture>
+                <img src={`./images/${filename}`} alt={filename} />
+              </picture>
+            </div>
+          </>
+        )
+      }
+
+      const awards = [
+        ['Best Arm Wrestling', 'Sébastien'],
+        ['Fighting Spirit', 'Walid'],
+        ['Most Questionable Code Editor', 'Charlotte'],
+        ['Hide and Seek Award', 'Meryem'],
+        ['The "Le Parisien" Award for Most Fashionable Gentleman', 'Julien'],
+        ['IronPulitzer Prize for Photography', 'Marly'],
+        ['(Michelin) Star Award', 'Guillaume'],
+        ['Best Ascent', 'Laurent'],
+        ['Most French Learnt and Most Laptops Used', 'Hamza'],
+        ['The "Do You Sleep In The Building?" Award', 'Igor'],
+        ['Victoire de la musique — Révélation', 'Ka$h'],
+        ['(Need For Speed) Most Wanted', 'Paul'],
+        ['The "Oh My God" Award for Too Many Courses', 'Yuan'],
+        [
+          'The "My Brain Is Melting, I Love It" Award for Masichism',
+          'Benjamin',
+        ],
+        ['Most Words Spoken', 'Valéry'],
+        ['Super "Chill Like That" Award', 'Aymeric'],
+        ['Tallest', 'Marko'],
+      ]
+
+      const questions = [
+        <h1 className="paddington">Cohort Awards!</h1>,
+        <p>Welcome to the cohort awards!</p>,
+        ...awards.flatMap(([category, name]) => [
+          <h2>{category}</h2>,
+          <h2 className="paddington">{name}!</h2>,
+        ]),
+        <>
+          <h2 className="paddington">Thank you!</h2>
+          <p>The end.</p>
+        </>,
+      ]
+
+      const QuestionSection = ({ element }) => <section>{element}</section>
+
+      ReactDOM.render(
+        <>
+          <main>
+            {questions.map((q, i) => (
+              <QuestionSection element={q} key={i} />
+            ))}
+          </main>
+        </>,
+        document.getElementById('root'),
+        () => hljs.highlightAll()
+      )
+    </script>
+  </body>
+</html>
